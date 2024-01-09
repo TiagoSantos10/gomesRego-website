@@ -2,10 +2,6 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "linebreak-style": 0,
-    "react/function-component-definition": [2, {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-    }],
     // enable additional rules
     "indent": ["error", 4],
     "quotes": ["error", "double"],
