@@ -1,8 +1,8 @@
-import Example from "./components/Example";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => (
     <div>
-        <Example />
+        <Navbar />
         <h1>My App</h1>
         <p>Some content</p>
     </div>
