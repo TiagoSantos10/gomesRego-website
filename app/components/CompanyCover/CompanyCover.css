@@ -1,0 +1,29 @@
+.image-container {
+    width: 100%;
+    height: 350px;
+    position: relative;
+
+    .image {
+        width: 100%;
+        height: 100%;
+        background: url('../../../public/assets/example-bg-img.png') no-repeat center;
+        background-size: cover;
+    }
+
+    .text-inside-img {
+        position: absolute;
+        top: 50%; /* Adjust the top position as needed */
+        left: 20%; /* Adjust the left position as needed */
+        transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
+        color: black; /* Set the text color */
+        font-size: 14px; /* Set the font size */
+        width: 280px;
+
+        .badge {
+            width: 105px;
+            height: 105px;
+            background: url('../../../public/assets/badge.svg') no-repeat center;
+            margin-bottom: 30px;
+        }
+    }
+}
