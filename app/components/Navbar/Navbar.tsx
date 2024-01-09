@@ -1,7 +1,5 @@
 import React from "react";
-import logo from "../../../public/assets/gras-logo.png";
 import "./Navbar.css";
-import Image from "next/image";
 
 const Navbar = () => (
     <div id="navbar">
