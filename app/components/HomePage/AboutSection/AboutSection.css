@@ -1,0 +1,21 @@
+#about-section-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    flex-direction: column;
+
+    .heading-title {
+        color: #2C255B;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 35px;
+        text-transform: uppercase;
+    }
+
+    .description {
+        color: #000;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        width: 60%;
+    }
+}
