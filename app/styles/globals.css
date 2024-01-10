@@ -6,3 +6,12 @@
     src: local('Montserrat Regular'), local('Montserrat-Regular'),
          url('../../public/fonts/montserrat/Montserrat-Regular.ttf') format('ttf');
 }
+
+@font-face {
+    /* Regular */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inter Regular'), local('Inter-Regular'),
+         url('../../public/fonts/inter/Inter-Regular.ttf') format('ttf');
+}

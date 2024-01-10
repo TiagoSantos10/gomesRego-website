@@ -1,12 +1,12 @@
 import Navbar from "./components/Navbar/Navbar";
-import CompanyCover from "./components/CompanyCover/CompanyCover";
+import CompanyCover from "./components/HomePage/CompanyCover/CompanyCover";
+import AboutSection from "./components/HomePage/AboutSection/AboutSection";
 
 const App = () => (
     <div>
         <Navbar />
         <CompanyCover />
-        <h1>My App</h1>
-        <p>Some content</p>
+        <AboutSection />
     </div>
 );
 
