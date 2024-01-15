@@ -39,5 +39,13 @@
             /* Spacing */
             padding-right: 16px;
         }
+
+        li > a:hover {
+            color: #838385;
+        }
+
+        li > a.active {
+            color: #838385;
+        }
     }
 }

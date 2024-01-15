@@ -6,11 +6,11 @@ const Navbar = () => (
         <div className="gras-logo" />
         <div className="navbar-navigation">
             <li>
-                <a href="#">Inicio</a>
-                <a href="#">Equipa</a>
-                <a href="#">Áreas de Atuação</a>
-                <a href="#">Noticias</a>
-                <a href="#">Contactos</a>
+                <a href="/">Inicio</a>
+                <a href="/team">Equipa</a>
+                <a href="/services">Áreas de Atuação</a>
+                <a href="/news">Noticias</a>
+                <a href="/contacts">Contactos</a>
             </li>
         </div>
     </div>
