@@ -6,7 +6,6 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const pathname = usePathname();
-    console.log(pathname);
 
     return (
         <div id="navbar">
