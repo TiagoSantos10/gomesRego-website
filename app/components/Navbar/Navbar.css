@@ -28,11 +28,8 @@
         li > a {
             /* Font */
             color: #2C255B;
-            font-family: 'Montserrat', sans-serif;
             font-size: 16px;
-            font-style: normal;
             font-weight: 600;
-            line-height: normal;
             text-transform: uppercase;
             text-decoration: none;
 
