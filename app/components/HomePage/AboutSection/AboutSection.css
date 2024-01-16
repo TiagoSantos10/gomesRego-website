@@ -7,14 +7,12 @@
 
     .heading-title {
         color: var(--gras-purple);
-        font-family: 'Montserrat', sans-serif;
         font-size: 35px;
         text-transform: uppercase;
     }
 
     .description {
         color: #000;
-        font-family: 'Inter', sans-serif;
         font-size: 16px;
         width: 60%;
     }
