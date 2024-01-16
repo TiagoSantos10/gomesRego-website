@@ -6,7 +6,7 @@
     flex-direction: column;
 
     .heading-title {
-        color: #2C255B;
+        color: var(--gras-purple);
         font-family: 'Montserrat', sans-serif;
         font-size: 35px;
         text-transform: uppercase;

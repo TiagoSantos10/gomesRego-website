@@ -2,14 +2,16 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
+import { Montserrat } from "next/font/google";
 import "./Navbar.css";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Navbar = () => {
     const pathname = usePathname();
-    console.log(pathname);
 
     return (
-        <div id="navbar">
+        <div id="navbar" className={montserrat.className}>
             <div className="gras-logo" />
             <div className="navbar-navigation">
                 <li>
