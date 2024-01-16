@@ -27,7 +27,7 @@
 
         li > a {
             /* Font */
-            color: #2C255B;
+            color: var(--gras-purple);
             font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
@@ -38,11 +38,11 @@
         }
 
         li > a:hover {
-            color: #838385;
+            color: var(--gras-gray);
         }
 
         li > a.active {
-            color: #838385;
+            color: var(--gras-gray);
         }
     }
 }

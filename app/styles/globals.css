@@ -2,20 +2,8 @@ body {
     margin: 0 !important;
 }
 
-@font-face {
-    /* Regular */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Montserrat Regular'), local('Montserrat-Regular'),
-         url('../../public/fonts/montserrat/Montserrat-Regular.ttf') format('ttf');
-}
-
-@font-face {
-    /* Regular */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Inter Regular'), local('Inter-Regular'),
-         url('../../public/fonts/inter/Inter-Regular.ttf') format('ttf');
+:root {
+    --gras-purple: #2C255B;
+    --gras-gray: #838385;
+    --gras-background-blue: #38678D;
 }
