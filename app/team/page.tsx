@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar/Navbar";
 import person from "../../public/assets/person.png";
 import "../../public/fontawesome";
 import "./team.css";
+import "../animations/animations.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] }); 
 
@@ -14,10 +15,10 @@ const Team = () => (
         <Navbar />
         <div className="team-container">
             <div className="associate-one-container">
-                <div className="associate-one-left">
+                <div className="associate-one-left slide-in-left">
                     <Image src={person} alt="Dulce Gomes" width={300} height={300} />
                 </div>
-                <div className="associate-one-right">
+                <div className="associate-one-right slide-in-left">
                     <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
                     <div>
                         descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -44,7 +45,7 @@ const Team = () => (
                 </div>
             </div>
             <div className="associate-two-container">
-                <div className="associate-two-left">
+                <div className="associate-two-left slide-in-right">
                     <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
                     <div className="associate-two-description">
                         descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -69,15 +70,15 @@ const Team = () => (
                         </a>
                     </div>
                 </div>
-                <div className="associate-two-right">
+                <div className="associate-two-right slide-in-right">
                     <Image src={person} alt="Dulce Gomes" width={300} height={300} />
                 </div>
             </div>
             <div className="associate-one-container">
-                <div className="associate-one-left">
+                <div className="associate-one-left slide-in-left">
                     <Image src={person} alt="Dulce Gomes" width={300} height={300} />
                 </div>
-                <div className="associate-one-right">
+                <div className="associate-one-right slide-in-left">
                     <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
                     <div>
                         descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
