@@ -15,19 +15,31 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Team = () => {
     useEffect(() => {
-        const animatedElementFromLeft = document.getElementsByClassName("third-associate");
+        const animatedElementFromRight = document.getElementsByClassName("second-associate");
+        const animatedElementFromLeft = document.getElementsByClassName("associate-left");
 
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observerLeft = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("slide-in-left");
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0 }); // Adjust threshold as needed
+        });
 
-        Array.from(animatedElementFromLeft).forEach(el => observer.observe(el));
+        const observerRight = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("slide-in-right");
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        Array.from(animatedElementFromRight).forEach(el => observerRight.observe(el));
+        Array.from(animatedElementFromLeft).forEach(el => observerLeft.observe(el));
     }, []);
+
     return (
         <div>
             <Navbar />
@@ -63,7 +75,7 @@ const Team = () => {
                     </div>
                 </div>
                 <div className="associate-two-container">
-                    <div className="associate-two-left slide-in-right">
+                    <div className="associate-two-left second-associate">
                         <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
                         <div className="associate-two-description">
                             descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -88,15 +100,15 @@ const Team = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="associate-two-right slide-in-right">
+                    <div className="associate-two-right second-associate">
                         <Image src={person} alt="Dulce Gomes" width={300} height={300} />
                     </div>
                 </div>
                 <div className="associate-one-container">
-                    <div className="associate-one-left third-associate">
+                    <div className="associate-one-left associate-left">
                         <Image src={person} alt="Dulce Gomes" width={300} height={300} />
                     </div>
-                    <div className="associate-one-right third-associate">
+                    <div className="associate-one-right associate-left">
                         <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
                         <div>
                             descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
