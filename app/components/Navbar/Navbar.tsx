@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Montserrat } from "next/font/google";
 import "./Navbar.css";
@@ -9,6 +9,38 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Navbar = () => {
     const pathname = usePathname();
+
+    useEffect(() => {
+        // Get the navbar element
+        const navbar = document.getElementById("navbar");
+        
+        // Initial position of the navbar
+        var prevScrollPos = window.scrollY;
+
+        if (prevScrollPos > 0 && navbar) {
+            navbar.classList.add("scrolled");
+        }
+
+        // Function to be called when scrolling
+        window.onscroll = function() {
+            var currentScrollPos = window.scrollY;
+
+            // If the user is scrolling down, hide the navbar
+            if (navbar) {
+                // If the user is scrolling up, show the navbar and add the "scrolled" class
+                navbar.classList.add("scrolled");
+
+    
+                // If the user is at the top of the page, remove the "scrolled" class
+                if (currentScrollPos === 0) {
+                    navbar.classList.remove("scrolled");
+                }
+    
+                // Update the scroll position
+                prevScrollPos = currentScrollPos;
+            }
+        };
+    }, []);
 
     return (
         <div id="navbar" className={montserrat.className}>
