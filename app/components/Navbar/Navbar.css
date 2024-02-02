@@ -46,6 +46,10 @@
             padding-right: 16px;
         }
 
+        li > a:hover {
+            color: var(--gras-gray);
+        }
+
         li > a.active {
             color: var(--gras-gray);
         }
