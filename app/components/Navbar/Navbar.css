@@ -3,6 +3,14 @@
     height: 65px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s, background-color 0.3s;
+    z-index: 1000;
+
+    &.scrolled {
+        background-color: white;
+    }
 
     .gras-logo {
         width: 100px;
@@ -23,6 +31,7 @@
             height: 100%;
             align-items: center;
             display: flex;
+            position: relative;
         }
 
         li > a {
@@ -37,12 +46,27 @@
             padding-right: 16px;
         }
 
-        li > a:hover {
+        li > a.active {
             color: var(--gras-gray);
         }
 
-        li > a.active {
-            color: var(--gras-gray);
+        li > a.active::after {
+            display: block;
+            content: '';
+            border-bottom: 2px solid var(--gras-gray);
+            transform: scaleX(1);
+        }
+
+        li > a::after {
+            display: block;
+            content: '';
+            border-bottom: 2px solid var(--gras-gray);
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li > a:hover::after {
+            transform: scaleX(1);
         }
     }
 }
