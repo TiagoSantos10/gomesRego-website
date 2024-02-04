@@ -1,3 +1,5 @@
+"use client";
+
 import { usePathname } from "next/navigation";
 import { Montserrat } from "next/font/google";
 import "./Navbar.css";
