@@ -1,7 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./AboutSection.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] }); 
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 const AboutSection = () => (
     <div id="about-section-container">
