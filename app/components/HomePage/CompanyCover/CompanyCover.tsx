@@ -15,10 +15,7 @@ const CompanyCover = () => (
             <div className={`middle-text ${italianno.className}`}>5</div>
             <div className="bottom-text">anos</div>
         </div>
-        <div className="gras-img">
-            {/* <div className="img" /> */}
-            <img src="/gras-img.png" alt="gras" />
-        </div>
+        <div className="gras-img" />
     </div>
 );
 
