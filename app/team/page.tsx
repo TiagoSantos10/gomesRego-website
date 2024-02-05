@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 import person from "../../public/assets/person.png";
 import "../../public/fontawesome";
 import "./team.css";
@@ -135,6 +136,7 @@ const Team = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

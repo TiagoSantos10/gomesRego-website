@@ -8,9 +8,7 @@
     transition: top 0.3s, background-color 0.3s;
     z-index: 1000;
 
-    &.scrolled {
-        background-color: white;
-    }
+    background-color: white;
 
     .gras-logo {
         width: 100px;
