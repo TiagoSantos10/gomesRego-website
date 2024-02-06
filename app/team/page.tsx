@@ -50,7 +50,7 @@ const Team = () => {
                         <Image src={person} alt="Dulce Gomes" width={300} height={300} />
                     </div>
                     <div className="associate-one-right slide-in-left">
-                        <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
+                        <h1 className={montserrat.className}>Dulce Gomes</h1>
                         <div>
                             descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -77,7 +77,7 @@ const Team = () => {
                 </div>
                 <div className="associate-two-container">
                     <div className="associate-two-left second-associate">
-                        <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
+                        <h1 className={montserrat.className}>António Moura e Sá</h1>
                         <div className="associate-two-description">
                             descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -110,7 +110,7 @@ const Team = () => {
                         <Image src={person} alt="Dulce Gomes" width={300} height={300} />
                     </div>
                     <div className="associate-one-right associate-left">
-                        <h1 className={montserrat.className}>Dulce<br />Gomes</h1>
+                        <h1 className={montserrat.className}>Marianela Rego</h1>
                         <div>
                             descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
