@@ -1,0 +1,149 @@
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/green.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/violet.css';
+
+/* reset */
+button,
+fieldset,
+input {
+    all: unset;
+}
+
+.trigger {
+    margin-top: 65px;
+}
+
+.DialogOverlay {
+    background-color: var(--black-a9);
+    position: fixed;
+    inset: 0;
+    /* animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1); */
+}
+
+.DialogContent {
+    background-color: white;
+    box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    animation: contentShow 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent:focus {
+    outline: none;
+}
+
+.mobile-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background-color: var(--gras-white);
+}
+
+.mobile-navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.mobile-navbar ul li {
+    margin: 15px 0;
+}
+
+.mobile-navbar ul li a {
+    color: var(--gras-purple);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.mobile-navbar ul li a.active {
+    color: var(--gras-gray);
+}
+
+.checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.hamburger-lines {
+    height: 26px;
+    width: 32px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 792px) {
+    .hamburger-lines {
+        display: flex;
+    }
+}
+
+.hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contentShow {
+    from {
+        opacity: 0.5;
+        transform: translateY(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
