@@ -1,6 +1,4 @@
 import "./CompanyCover.css";
-import grasImage from "../../../../public/assets/gras-img.png";
-import Image from "next/image";
 import { Italianno } from "next/font/google";
 
 const italianno = Italianno({
