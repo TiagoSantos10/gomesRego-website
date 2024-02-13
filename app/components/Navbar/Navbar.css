@@ -82,4 +82,12 @@
     li .navigation-links {
         display: none !important;
     }
+
+    .navbar-navigation {
+        margin-right: 40px !important;
+    }
+
+    .gras-logo {
+        margin-left: 40px !important;
+    }
 }

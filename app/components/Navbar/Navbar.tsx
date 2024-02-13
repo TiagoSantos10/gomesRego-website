@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Montserrat } from "next/font/google";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -10,21 +11,31 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Navbar = () => {
     const pathname = usePathname();
+    const [isToggled, setIsToggled] = useState(false);
 
     return (
         <>
-            <Dialog.Root>
+            <Dialog.Root onOpenChange={() => setIsToggled(!isToggled)}>
                 <div id="navbar" className={montserrat.className}>
                     <div className="gras-logo" />
                     <div className="navbar-navigation">
                         <li>
-                            <Dialog.Trigger asChild>
-                                <input className="checkbox" type="checkbox" name="menu-checkbox" id="toggle-hamburguer" />
-                            </Dialog.Trigger>
-                            <div className="hamburger-lines">
-                                <span className="line line1"></span>
-                                <span className="line line2"></span>
-                                <span className="line line3"></span>
+                            <div className="hamburger-menu">
+                                <Dialog.Trigger asChild>
+                                    <input
+                                        className="checkbox"
+                                        type="checkbox"
+                                        name="menu-checkbox"
+                                        id="toggle-hamburger"
+                                        checked={isToggled}
+                                        readOnly
+                                    />
+                                </Dialog.Trigger>
+                                <div className="hamburger-lines">
+                                    <span className="line line1"></span>
+                                    <span className="line line2"></span>
+                                    <span className="line line3"></span>
+                                </div>
                             </div>
                             <div className="navigation-links">
                                 <a
@@ -62,7 +73,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <Dialog.Portal>
-                    <Dialog.Overlay className="DialogOverlay" />
+                    <Dialog.Overlay className="DialogOverlay" id="dialog-overlay" />
                     <Dialog.Content className="DialogContent">
                         <div className="mobile-navbar">
                             <ul>
