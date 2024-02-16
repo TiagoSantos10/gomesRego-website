@@ -13,7 +13,7 @@ const ApproachSection = () => (
             <div className="group-row">
                 <div className="item">
                     <div className="item-circle">
-                        <FontAwesomeIcon icon={["fas", "magnifying-glass"]} size="3x" color="var(--gras-background-blue)" />
+                        <FontAwesomeIcon icon={["fas", "magnifying-glass"]} size="3x" color="var(--gras-background-blue)" className="fa-icon" />
                     </div>
                     <div className="item-title">Diagnóstico</div>
                     <div className="item-description">
@@ -25,7 +25,7 @@ const ApproachSection = () => (
                 </div>
                 <div className="item">
                     <div className="item-circle">
-                        <FontAwesomeIcon icon={["fas", "list-check"]} size="3x" color="var(--gras-background-blue)" />
+                        <FontAwesomeIcon icon={["fas", "list-check"]} size="3x" color="var(--gras-background-blue)" className="fa-icon" />
                     </div>
                     <div className="item-title">Planeamento</div>
                     <div className="item-description">
@@ -38,7 +38,7 @@ const ApproachSection = () => (
             <div className="group-row">
                 <div className="item">
                     <div className="item-circle">
-                        <FontAwesomeIcon icon={["far", "lightbulb"]} size="3x" color="var(--gras-background-blue)" />
+                        <FontAwesomeIcon icon={["far", "lightbulb"]} size="3x" color="var(--gras-background-blue)" className="fa-icon" />
                     </div>
                     <div className="item-title">Análise</div>
                     <div className="item-description">
@@ -49,7 +49,7 @@ const ApproachSection = () => (
                 </div>
                 <div className="item">
                     <div className="item-circle">
-                        <FontAwesomeIcon icon={["fas", "arrow-up-right-from-square"]} size="3x" color="var(--gras-background-blue)" />
+                        <FontAwesomeIcon icon={["fas", "arrow-up-right-from-square"]} size="3x" color="var(--gras-background-blue)" className="fa-icon" />
                     </div>
                     <div className="item-title">Reporte</div>
                     <div className="item-description">
