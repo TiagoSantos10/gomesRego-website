@@ -1,5 +1,5 @@
-import "./CompanyCover.css";
 import { Italianno } from "next/font/google";
+import "./CompanyCover.css";
 
 const italianno = Italianno({
     subsets: ["latin"],
