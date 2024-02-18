@@ -25,6 +25,8 @@
 
 @media (max-width: 792px) {
     #about-section-container {
+        padding-top: 10px;
+
         .heading-title {
             color: var(--gras-background-blue);
             font-size: 30px;
