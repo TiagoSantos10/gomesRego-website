@@ -26,28 +26,6 @@
             flex-direction: column;
             align-items: center;
 
-            .ligia-gomes-img {
-                background-image: url('../../../../public/assets/ligia.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin-bottom: 15px;
-            }
-
-            .jose-carlos-img {
-                background-image: url('../../../../public/assets/jose.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin-bottom: 15px;
-            }
-
             .dulce-gomes-img {
                 background-image: url('../../../../public/assets/dulce.png');
                 background-repeat: no-repeat;
@@ -84,6 +62,51 @@
             .partner-name {
                 font-size: 14px;
                 font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (max-width: 792px) {
+    #partners-section {
+        padding-top: 10px;
+
+        .partners-section-header {
+            color: var(--gras-background-blue);
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 60px;
+            margin-bottom: 34px;
+        }
+
+        .partners-content {
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            border-radius: 50px;
+
+            .item {
+                flex-shrink: 0;
+                margin: 30px 10px;
+
+                .dulce-gomes-img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .antonio-moura-img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .marianela-rego-img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .partner-name {
+                    font-size: 12px;
+                }
             }
         }
     }
