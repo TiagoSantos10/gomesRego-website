@@ -10,14 +10,6 @@ const PartnersSection = () => (
         </h1>
         <div className="partners-content">
             <div className="item">
-                <div className="ligia-gomes-img" />
-                <div className="partner-name">Lígia Gomes</div>
-            </div>
-            <div className="item">
-                <div className="jose-carlos-img" />
-                <div className="partner-name">José Carlos Silva</div>
-            </div>
-            <div className="item">
                 <div className="dulce-gomes-img" />
                 <div className="partner-name">Dulce Gomes</div>
             </div>
