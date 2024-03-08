@@ -1,14 +1,17 @@
-import { Montserrat } from "next/font/google";
+import { Almarai } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../../../../public/fontawesome";
 import "./ApproachSection.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const almarai = Almarai({
+    subsets: ["arabic"],
+    weight: "400"
+});
 
 const ApproachSection = () => (
     <div id="approach-section">
-        <h1 className={`${montserrat.className} heading-title`}>A nossa abordagem</h1>
+        <h1 className={`${almarai.className} heading-title`}>A nossa abordagem</h1>
         <div className="approach-group">
             <div className="group-row">
                 <div className="item">

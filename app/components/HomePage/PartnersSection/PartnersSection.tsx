@@ -1,11 +1,14 @@
-import { Montserrat } from "next/font/google";
+import { Almarai } from "next/font/google";
 import "./PartnersSection.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const almarai = Almarai({
+    subsets: ["arabic"],
+    weight: "400"
+});
 
 const PartnersSection = () => (
     <div id="partners-section">
-        <h1 className={`partners-section-header ${montserrat.className}`}>
+        <h1 className={`partners-section-header ${almarai.className}`}>
             Parceiros
         </h1>
         <div className="partners-content">
