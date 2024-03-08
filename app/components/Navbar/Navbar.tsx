@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Montserrat } from "next/font/google";
+import { Almarai } from "next/font/google";
 import * as Dialog from "@radix-ui/react-dialog";
 import "./Hamburger.css";
 import "./Navbar.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const almarai = Almarai({
+    subsets: ["arabic"],
+    weight: "400"
+});
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -16,7 +19,7 @@ const Navbar = () => {
     return (
         <>
             <Dialog.Root onOpenChange={() => setIsToggled(!isToggled)}>
-                <div id="navbar" className={montserrat.className}>
+                <div id="navbar" className={almarai.className}>
                     <div className="gras-logo" />
                     <div className="navbar-navigation">
                         <li>
