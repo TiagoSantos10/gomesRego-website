@@ -29,7 +29,7 @@ const SwiperSlideElement = ({ text }: SwiperSlideElementType) => {
 
 const ServicesContainer = () => {
     return (
-        <div className="services-container">
+        <section className="services-container">
             <h1 className={almarai.className}>Serviços</h1>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
@@ -70,7 +70,7 @@ const ServicesContainer = () => {
                     <SwiperSlideElement text="Avaliação e Reestruturação de Empresas" />
                 </SwiperSlide>
             </Swiper>
-        </div>
+        </section>
     );
 };
 

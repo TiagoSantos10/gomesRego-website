@@ -10,7 +10,7 @@ const almarai = Almarai({
 });
 
 const SectorsContainer = () => (
-    <div className="sectors-container">
+    <section className="sectors-container">
         <h1 className={almarai.className}>Setores de Atividade</h1>
         <div className="public-sector">
             <div className="public-left-side">
@@ -91,7 +91,7 @@ const SectorsContainer = () => (
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 );
 
 export default SectorsContainer;
