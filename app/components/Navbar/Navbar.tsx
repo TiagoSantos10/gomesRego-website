@@ -17,7 +17,7 @@ const Navbar = () => {
     const [isToggled, setIsToggled] = useState(false);
 
     return (
-        <>
+        <header>
             <Dialog.Root onOpenChange={() => setIsToggled(!isToggled)}>
                 <div id="navbar" className={almarai.className}>
                     <div className="gras-logo" />
@@ -120,7 +120,7 @@ const Navbar = () => {
                     </Dialog.Content>
                 </Dialog.Portal>
             </Dialog.Root>
-        </>
+        </ header>
     );
 };
 
