@@ -10,7 +10,7 @@ const almarai = Almarai({
 });
 
 const ApproachSection = () => (
-    <div id="approach-section">
+    <section id="approach-section">
         <h1 className={`${almarai.className} heading-title`}>A nossa abordagem</h1>
         <div className="approach-group">
             <div className="group-row">
@@ -63,7 +63,7 @@ const ApproachSection = () => (
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 );
 
 export default ApproachSection;
