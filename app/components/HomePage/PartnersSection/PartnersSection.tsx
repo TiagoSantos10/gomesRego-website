@@ -7,7 +7,7 @@ const almarai = Almarai({
 });
 
 const PartnersSection = () => (
-    <div id="partners-section">
+    <section id="partners-section">
         <h1 className={`partners-section-header ${almarai.className}`}>
             Parceiros
         </h1>
@@ -25,7 +25,7 @@ const PartnersSection = () => (
                 <div className="partner-name">Marianela Rego</div>
             </div>
         </div>
-    </div>
+    </section>
 );
 
 export default PartnersSection;

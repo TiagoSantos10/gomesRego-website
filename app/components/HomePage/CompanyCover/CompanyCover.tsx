@@ -7,14 +7,14 @@ const italianno = Italianno({
 });
 
 const CompanyCover = () => (
-    <div className="company-cover-section">
+    <section className="company-cover-section">
         <div className="text-inside-img">
             <div className="upper-text">Há mais de</div>
             <div className={`middle-text ${italianno.className}`}>5</div>
             <div className="bottom-text">anos</div>
         </div>
         <div className="gras-img" />
-    </div>
+    </section>
 );
 
 export default CompanyCover;
