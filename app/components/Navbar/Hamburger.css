@@ -67,7 +67,7 @@ input {
 
 .checkbox {
     position: absolute;
-    display: block;
+    display: none;
     height: 32px;
     width: 32px;
     z-index: 5;
@@ -86,6 +86,10 @@ input {
 @media (max-width: 792px) {
     .hamburger-lines {
         display: flex;
+    }
+
+    .checkbox {
+        display: block;
     }
 }
 
