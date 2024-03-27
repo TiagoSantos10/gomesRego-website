@@ -50,20 +50,11 @@ h1 {
     animation: 0.1s linear hover-slide-top both;
 }
 
-.slide-in-right > .partner-content > h1 {
-    animation: 0.6s ease-in-out slide-in-right both;
+.slide-in > .partner-content > h1 {
+    animation: 0.6s ease-in-out slide-in both;
 }
 
-.slide-in-right > .partner-content > .content-description {
-    animation: 0.6s ease-in-out slide-in-right both;
-    animation-delay: 0.1s;
-}
-
-.slide-in-left > .partner-content > h1 {
-    animation: 0.6s ease-in-out slide-in-left both;
-}
-
-.slide-in-left > .partner-content > .content-description {
-    animation: 0.6s ease-in-out slide-in-left both;
+.slide-in > .partner-content > .content-description {
+    animation: 0.6s ease-in-out slide-in both;
     animation-delay: 0.1s;
 }

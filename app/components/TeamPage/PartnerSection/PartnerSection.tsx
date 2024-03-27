@@ -37,7 +37,7 @@ const PartnerSection = ({
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && divRef.current) {
-                    divRef.current.classList.add(`slide-in-${imageAlignment}`);
+                    divRef.current.classList.add("slide-in");
                     observer.unobserve(divRef.current);
                 }
             });
