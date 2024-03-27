@@ -56,24 +56,6 @@
     }
 }
 
-.slide-in-right > .partner-content > h1 {
-    animation: 0.6s ease-in-out slide-in-right both;
-}
-
-.slide-in-right > .partner-content > .content-description {
-    animation: 0.6s ease-in-out slide-in-right both;
-    animation-delay: 0.1s;
-}
-
-.slide-in-left > .partner-content > h1 {
-    animation: 0.6s ease-in-out slide-in-left both;
-}
-
-.slide-in-left > .partner-content > .content-description {
-    animation: 0.6s ease-in-out slide-in-left both;
-    animation-delay: 0.1s;
-}
-
 /* Slide to top when hovered */
 @keyframes hover-slide-top {
     0% {
