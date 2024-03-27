@@ -1,5 +1,5 @@
 /* slide from the left side */
-@-webkit-keyframes slide-in-left {
+@-webkit-keyframes slide-in {
     0% {
         -webkit-transform: translateX(-30px);
         transform: translateX(-30px);
@@ -13,39 +13,10 @@
     }
 }
 
-@keyframes slide-in-left {
+@keyframes slide-in {
     0% {
         -webkit-transform: translateX(-30px);
         transform: translateX(-30px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* slide from the right side */
-@-webkit-keyframes slide-in-right {
-    0% {
-        -webkit-transform: translateX(30px);
-        transform: translateX(30px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-right {
-    0% {
-        -webkit-transform: translateX(30px);
-        transform: translateX(30px);
         opacity: 0;
     }
 
