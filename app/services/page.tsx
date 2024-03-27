@@ -1,9 +1,9 @@
-import SectorsContainer from "../components/ServicesPage/SectorsContainer/SectorsContainer";
+import ActivitySectorsContainer from "../components/ServicesPage/ActivitySectorsContainer/ActivitySectorsContainer";
 import ServicesContainer from "../components/ServicesPage/ServicesContainer/ServicesContainer";
 
 const Services = () => (
     <>
-        <SectorsContainer />
+        <ActivitySectorsContainer />
         <ServicesContainer />
     </>
 );
