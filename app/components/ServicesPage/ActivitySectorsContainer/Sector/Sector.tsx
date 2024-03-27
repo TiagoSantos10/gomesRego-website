@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { Almarai } from "next/font/google";
 import SectorItem from "./SectorItem/SectorItem";
-import "../../../../animations/animations.css";
 import "./Sector.css";
 
 const almarai = Almarai({

@@ -6,7 +6,6 @@ import { Almarai } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../../../../public/fontawesome";
-import "../../../animations/animations.css";
 import "./PartnerSection.css";
 
 const almarai = Almarai({

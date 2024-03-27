@@ -32,6 +32,19 @@ h1 {
     color: var(--gras-purple);
     font-weight: 600;
     padding-bottom: 20px;
+
+    /* animation */
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.content-description {
+    /* animation */
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition-delay: .1s;
 }
 
 .partner-socials {
@@ -44,17 +57,23 @@ h1 {
 
 .partner-socials a {
     margin-left: 15px;
+    /* animation */
+    transform: translateY(0);
+    transition: transform 0.1s linear;
 }
 
 .partner-socials a:hover {
-    animation: 0.1s linear hover-slide-top both;
+    /* animation */
+    transform: translateY(-2px);
 }
 
-.slide-in > .partner-content > h1 {
-    animation: 0.6s ease-in-out slide-in both;
+.slide-in>.partner-content>h1 {
+    /* animation */
+    transform: translateX(0);
+    opacity: 1;
 }
 
-.slide-in > .partner-content > .content-description {
-    animation: 0.6s ease-in-out slide-in both;
-    animation-delay: 0.1s;
+.slide-in>.partner-content>.content-description {
+    transform: translateX(0);
+    opacity: 1;
 }
