@@ -30,7 +30,7 @@ const SwiperSlideElement = ({ text }: SwiperSlideElementType) => {
 const ServicesContainer = () => {
     return (
         <section className="services-container">
-            <h1 className={almarai.className}>Serviços</h1>
+            <h1 className={`${almarai.className} section-title`}>Serviços</h1>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
                 slidesPerView={5}

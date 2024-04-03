@@ -22,7 +22,7 @@ const privateSectorItems = [
 
 const ActivitySectorsContainer = () => (
     <section className="sectors-container">
-        <h1 className={almarai.className}>Setores de Atividade</h1>
+        <h1 className={`${almarai.className} section-title`}>Setores de Atividade</h1>
         <Sector title="Setor Público" items={publicSectorItems} imageAlignment="right" />
         <Sector title="Setor Privado" items={privateSectorItems} imageAlignment="left" />
     </section>

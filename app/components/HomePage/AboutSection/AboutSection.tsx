@@ -8,7 +8,7 @@ const almarai = Almarai({
 
 const AboutSection = () => (
     <section id="about-section-container">
-        <h1 className={`heading-title ${almarai.className}`}>Quem Somos</h1>
+        <h1 className={`${almarai.className} section-title`}>Quem Somos</h1>
         <p className="description">
             descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris

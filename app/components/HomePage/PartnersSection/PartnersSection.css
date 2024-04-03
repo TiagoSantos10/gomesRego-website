@@ -5,13 +5,6 @@
     flex-direction: column;
     padding: 60px 0;
 
-    .partners-section-header {
-        color: var(--gras-background-blue);
-        font-size: 35px;
-        font-weight: 600;
-        margin-bottom: 34px;
-    }
-
     .partners-content {
         width: 60%;
         border-radius: 70px;
