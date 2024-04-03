@@ -7,15 +7,11 @@ const Team = () => {
             <PartnerSection
                 image={person}
                 name="Dulce Gomes"
-                description="descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+                description={[
+                    "descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+                    "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+                ]}
                 email="tiagoserafimsousasantos@gmail.com"
                 facebook="https://www.facebook.com/"
                 linkedin="https://pt.linkedin.com/"
@@ -25,15 +21,11 @@ const Team = () => {
             <PartnerSection
                 image={person}
                 name="António Moura e Sá"
-                description="descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+                description={[
+                    "descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+                    "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+                ]}
                 email="tiagoserafimsousasantos@gmail.com"
                 facebook="https://www.facebook.com/"
                 linkedin="https://pt.linkedin.com/"
@@ -43,15 +35,11 @@ const Team = () => {
             <PartnerSection
                 image={person}
                 name="Marianela Rego"
-                description="descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+                description={[
+                    "descrição sobre a empresa - Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+                    "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+                ]}
                 email="tiagoserafimsousasantos@gmail.com"
                 facebook="https://www.facebook.com/"
                 linkedin="https://pt.linkedin.com/"

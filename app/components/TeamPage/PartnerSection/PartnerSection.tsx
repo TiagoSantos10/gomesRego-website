@@ -16,7 +16,7 @@ const almarai = Almarai({
 type PartnerSectionProps = {
     image: StaticImageData;
     name: string;
-    description: string;
+    description: string[];
     email: string;
     facebook: string;
     linkedin: string;
@@ -53,7 +53,11 @@ const PartnerSection = ({
             <div className="partner-content">
                 <h1 className={almarai.className}>{name}</h1>
                 <div className="content-description">
-                    {description}
+                    <ul>
+                        {description.map((desc, index) => (
+                            <li key={index}>{desc}</li>
+                        ))}
+                    </ul>
                 </div>
                 <div className="partner-socials">
                     <a href={`mailto:${email}`} target="_blank">
