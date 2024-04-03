@@ -4,7 +4,7 @@ import "./FiltersSection.css";
 
 const FiltersSection = () => {
     return (
-        <div>
+        <div className="filters-section">
             <OptionsSection />
             <SearchInput />
         </div>
