@@ -1,0 +1,26 @@
+button {
+    border: 2px solid var(--gras-background-blue);
+    border-radius: 5px;
+    color: var(--gras-background-blue);
+    cursor: pointer;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+}
+
+button:hover, .selected {
+    background-color: var(--gras-background-blue);
+    color: white;
+}
+
+.medium {
+    height: 35px;
+    padding: 0 25px;
+}
+
+.large {
+    height: 40px;
+    padding: 0 100px;
+}
