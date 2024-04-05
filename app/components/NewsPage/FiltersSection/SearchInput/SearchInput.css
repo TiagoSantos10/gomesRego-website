@@ -1,10 +1,9 @@
 .search-input {
     display: flex;
-    gap: 10px;
-    margin-right: 115px;
-    margin-bottom: 50px;
+    margin-right: 110px;
     justify-content: flex-end;
     position: relative;
+    width: 25%;
 }
 
 .search-icon {
@@ -21,5 +20,5 @@ input {
     text-align: left;
     padding: 0 10px;
     display: flex;
-    width: 400px;
+    width: 100%;
 }
