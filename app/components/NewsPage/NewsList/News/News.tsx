@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { NewsType } from "@/app/utils/types/types";
-import Image from "next/image";
+import "./News.css";
 
 type NewsProps = {
     newsItem: NewsType;
@@ -7,14 +8,11 @@ type NewsProps = {
 
 const News: React.FC<NewsProps> = ({ newsItem }) => {
     return (
-        <>
-            <div className="news">
-                <Image src={newsItem.image} alt={newsItem.title} width={315} height={260} />
-                <h2>{newsItem.title}</h2>
-                <p>{newsItem.content}</p>
-                <p>{newsItem.date}</p>
-            </div>
-        </>
+        <div className="news">
+            <img className="news-img" src={newsItem.image} alt={newsItem.title} />
+            <h2 className="news-title">{newsItem.title}</h2>
+            <p className="news-description">{newsItem.content}</p>
+        </div>
     );
 };
 
