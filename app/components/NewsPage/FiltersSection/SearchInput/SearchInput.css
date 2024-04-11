@@ -1,9 +1,8 @@
 .search-input {
     display: flex;
     margin-right: 110px;
-    justify-content: flex-end;
     position: relative;
-    width: 25%;
+    width: 20%;
 }
 
 .search-icon {
