@@ -1,6 +1,6 @@
 .news-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 75px;
+    grid-gap: 50px;
     margin: 0 110px 50px 85px;
 }
