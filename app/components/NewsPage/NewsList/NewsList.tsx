@@ -3,16 +3,28 @@
 import useNews from "@/app/utils/hooks";
 import News from "./News/News";
 import { NewsType } from "@/app/utils/types/types";
-import "./NewsList.css";
 import HighlightedNews from "./HighlightedNews/HighlightedNews";
+import "./NewsList.css";
 
 const NewsList = () => {
-    const news = useNews();
+    const { news } = useNews();
+    let highlightedNews = null;
+    let remainingNews = null;
+
+    if (news.activeFilter === "all") {
+        const highlightedIndex = news.filteredNews.findIndex(
+            (newsItem: NewsType) => newsItem.highlighted
+        );
+        highlightedNews = highlightedIndex !== -1 ? news.filteredNews[highlightedIndex] : null;
+        remainingNews = news.filteredNews.filter((_news: NewsType, index: number) => index !== highlightedIndex);
+    } else {
+        remainingNews = news.filteredNews;
+    }
 
     return (
         <div className="news-list">
-            <HighlightedNews highlightedNews={news.newsList[0]} />
-            {news.newsList.map((newsItem: NewsType) => (
+            {highlightedNews && <HighlightedNews highlightedNews={highlightedNews} />}
+            {remainingNews && remainingNews.map((newsItem: NewsType) => (
                 <News key={newsItem.id} newsItem={newsItem} />
             ))}
         </div>

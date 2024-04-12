@@ -2,18 +2,20 @@ import "./Button.css";
 
 type ButtonProps = {
     text: string;
-    size: "small" | "medium" | "large";
+    size?: "small" | "medium" | "large";
     isSelected?: boolean;
+    onClick?: () => void;
 };
 
-const Button = ({ text, size, isSelected }: ButtonProps) => {
+const Button = ({
+    text,
+    size = "medium",
+    isSelected = false,
+    onClick = () => {}
+}: ButtonProps) => {
     return (
-        <button className={`${size} ${isSelected ? "selected" : ""}`}>{text}</button>
+        <button className={`${size} ${isSelected ? "selected" : ""}`} onClick={onClick}>{text}</button>
     );
-};
-
-Button.defaultProps = {
-    size: "medium"
 };
 
 export default Button;

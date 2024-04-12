@@ -6,7 +6,7 @@ const news = [
         image: "https://picsum.photos/715/787",
         category: "Economia",
         date: "2024-02-01",
-        highlighted: true
+        highlighted: false
     },
     {
         id: 2,
@@ -51,7 +51,7 @@ const news = [
         image: "https://picsum.photos/715/787",
         category: "Saúde",
         date: "2024-01-01",
-        highlighted: false
+        highlighted: true
     },
     {
         id: 7,

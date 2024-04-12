@@ -7,3 +7,8 @@ export type NewsType = {
     date: string;
     highlighted: boolean;
 };
+
+export type NewsContextType = {
+    filteredNews: NewsType[];
+    activeFilter: string;
+};
