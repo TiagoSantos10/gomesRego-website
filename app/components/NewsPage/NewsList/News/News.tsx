@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { NewsType } from "@/app/utils/types/types";
 import "./News.css";
 

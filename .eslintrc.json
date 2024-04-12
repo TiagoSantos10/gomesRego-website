@@ -8,6 +8,7 @@
         "semi": ["error", "always"],
         "eol-last": ["error", "always"],
         "no-console": "error",
-        "no-unused-vars": "error"
+        "no-unused-vars": "error",
+        "@next/next/no-img-element": "off"
     }
 }
