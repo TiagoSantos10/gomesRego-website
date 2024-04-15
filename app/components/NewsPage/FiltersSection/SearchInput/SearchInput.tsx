@@ -3,8 +3,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../../../../../public/fontawesome";
-import useNews from "@/app/utils/hooks";
 import { useRef } from "react";
+import useNews from "@/app/utils/hooks";
 import "./SearchInput.css";
 
 const SearchInput = () => {
