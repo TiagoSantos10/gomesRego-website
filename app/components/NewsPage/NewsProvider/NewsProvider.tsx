@@ -22,8 +22,15 @@ const NewsProvider: React.FC<NewsProviderProps> = ({ children, initialNews }) =>
         setNews({ filteredNews, activeFilter: filterId });
     };
 
+    const setSearch = (searchTerm: string) => {
+        if (searchTerm.length === 0) return setNews({ filteredNews: initialNews, activeFilter: "all" });
+    
+        const filteredNews = initialNews.filter((newsItem) => newsItem.title.toLowerCase().includes(searchTerm.toLowerCase()));
+        setNews({ filteredNews, activeFilter: "all" });
+    };
+
     return (
-        <NewsContext.Provider value={{news, setFilter}}>
+        <NewsContext.Provider value={{news, setFilter, setSearch}}>
             {children}
         </NewsContext.Provider>
     );

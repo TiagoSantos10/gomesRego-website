@@ -14,7 +14,7 @@ const Button = ({
     onClick = () => {}
 }: ButtonProps) => {
     return (
-        <button className={`${size} ${isSelected ? "selected" : ""}`} onClick={onClick}>{text}</button>
+        <button className={`gras-btn ${size} ${isSelected ? "selected" : ""}`} onClick={onClick}>{text}</button>
     );
 };
 

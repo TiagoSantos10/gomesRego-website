@@ -4,19 +4,24 @@
     width: 20%;
 }
 
-.search-icon {
-    position: absolute;
-    top: 12px;
-    right: 15px;
+form {
+    width: 100%;
 }
 
-input {
+.search-input-bar {
     height: 35px;
     border: 2px solid var(--gras-background-blue);
     border-radius: 5px;
     color: var(--gras-background-blue);
     text-align: left;
-    padding: 0 10px;
     display: flex;
     width: 100%;
+    text-indent: 10px;
+}
+
+.submit-btn {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
 }
