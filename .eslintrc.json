@@ -1,14 +1,55 @@
 {
   "extends": "next/core-web-vitals",
-    "rules": {
-        "linebreak-style": 0,
-        // enable additional rules
-        "indent": ["error", 4],
-        "quotes": ["error", "double"],
-        "semi": ["error", "always"],
-        "eol-last": ["error", "always"],
-        "no-console": "error",
-        "no-unused-vars": "error",
-        "@next/next/no-img-element": "off"
-    }
+  "rules": {
+    "linebreak-style": 0,
+    // enable additional rules
+    "indent": [
+      "error",
+      4
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "no-console": "error",
+    "no-unused-vars": "error",
+    "@next/next/no-img-element": "off",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          "internal",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "**/*.{css,scss}",
+            "group": "external",
+            "position": "after"
+          }
+        ]
+      }
+    ]
+  }
 }

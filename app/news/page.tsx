@@ -1,8 +1,8 @@
 import { Almarai } from "next/font/google";
+import news from "@/app/utils/dummy/news";
 import FiltersSection from "../components/NewsPage/FiltersSection/FiltersSection";
 import NewsList from "../components/NewsPage/NewsList/NewsList";
 import NewsProvider from "../components/NewsPage/NewsProvider/NewsProvider";
-import news from "@/app/utils/dummy/news";
 import "./NewsPage.css";
 
 const almarai = Almarai({

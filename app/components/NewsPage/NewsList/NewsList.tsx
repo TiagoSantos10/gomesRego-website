@@ -1,8 +1,8 @@
 "use client";
 
 import useNews from "@/app/utils/hooks";
-import News from "./News/News";
 import { NewsType } from "@/app/utils/types/types";
+import News from "./News/News";
 import HighlightedNews from "./HighlightedNews/HighlightedNews";
 import "./NewsList.css";
 
