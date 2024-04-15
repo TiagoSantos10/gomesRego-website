@@ -1,8 +1,6 @@
 .options-section {
     display: flex;
     gap: 10px;
-    margin-left: 85px;
-    justify-content: flex-start;
     max-width: 60%;
     flex-wrap: wrap;
 }

@@ -1,0 +1,42 @@
+.highlighted-news {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    position: relative;
+}
+
+.highlighted-news-img {
+    border-radius: 30px;
+    width: 100%;
+    aspect-ratio: 16/10;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlighted-news-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 12px;
+    margin: 20px 20px;
+}
+
+.highlighted-news-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 30px 20px 40px 20px;
+}
+
+.highlighted-news-description {
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 0 20px 15px 20px;
+
+    /* Add ellipsis when text has more than 2 lines */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
