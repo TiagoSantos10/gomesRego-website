@@ -1,8 +1,8 @@
 .sectors-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 65px;
+    padding-left: var(--large-spacing);
+    padding-right: var(--large-spacing);
 
     h3 {
         color: var(--gras-background-blue);

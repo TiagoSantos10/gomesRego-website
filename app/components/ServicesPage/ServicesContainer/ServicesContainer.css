@@ -1,9 +1,7 @@
 .services-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    padding: 50px var(--large-spacing) 30px var(--large-spacing);
 
     .swiper-slide {
         display: flex;

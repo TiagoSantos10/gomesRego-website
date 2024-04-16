@@ -15,14 +15,14 @@
         float: left;
         background: url('../../../public/assets/gras-logo.png') no-repeat center;
         background-size: contain;
-        margin-left: 85px;
+        margin-left: var(--large-spacing);
     }
 
     .navbar-navigation {
         float: right;
         list-style-type: none;
         justify-content: center;
-        margin-right: 85px;
+        margin-right: var(--large-spacing);
         display: flex;
         flex-direction: row;
 
@@ -46,7 +46,7 @@
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            padding-right: 25px;
+            padding-left: 25px;
         }
 
         li > .navigation-links a:hover {

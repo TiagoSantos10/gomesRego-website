@@ -1,8 +1,6 @@
 .sector-container {
     margin-bottom: 50px;
     min-height: 350px;
-    margin-left: 115px;
-    margin-right: 115px;
     display: flex;
     justify-content: space-between;
     gap: 150px;
@@ -18,7 +16,7 @@
     .sector-image {
         width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
 
         .public-img {
             width: 350px;
