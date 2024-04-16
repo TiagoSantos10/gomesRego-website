@@ -37,7 +37,7 @@ const ServicesContainer = () => {
                 slidesPerGroup={5}
                 navigation={true}
                 pagination={{ clickable: true }}
-                style={{ width: "80%", height: "200px"}}
+                style={{ width: "100%", height: "200px"}}
             >
                 <SwiperSlide className="swiper-slide">
                     <SwiperSlideElement text="Consultoria Contabilistica" />

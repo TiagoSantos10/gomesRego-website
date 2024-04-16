@@ -1,15 +1,13 @@
 #about-section-container {
-    width: 100%;
     display: flex;
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
     flex-direction: column;
+    padding: 60px var(--large-spacing);
 
     .description {
         color: #000;
         font-size: 16px;
-        width: 60%;
+        width: 100%;
 
         background: url('../../../../public/assets/grasLogoBG.png') center no-repeat;
         background-size: contain;

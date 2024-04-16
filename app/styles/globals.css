@@ -20,4 +20,8 @@ main {
     --gras-background-blue: #38678D;
     --gras-beige: #FFF8E7;
     --gras-white-title: #EAEAEA;
+
+    --large-spacing: 85px;
+    --medium-spacing: 50px;
+    --small-spacing: 25px;
 }
