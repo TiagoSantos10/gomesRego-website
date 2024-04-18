@@ -1,14 +1,52 @@
+export type NewsCategoriesType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        name: string;
+    }
+};
+
+type NewsImageType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        title: string;
+        file: {
+            url: string;
+            fileName: string;
+            contentType: string;
+        }
+    }
+};
+
+export type NewsContentfulResponseType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        title: string;
+        description: string;
+        image: NewsImageType;
+        date: string;
+        highlighted: boolean;
+        category: NewsCategoriesType;
+        extraContent: string;
+    }
+};
+
 export type NewsType = {
-    id: number;
     title: string;
-    content: string;
-    image: string;
-    category: string;
+    description: string;
+    image: NewsImageType;
     date: string;
     highlighted: boolean;
+    category: NewsCategoriesType;
+    extraContent: string;
 };
 
 export type NewsContextType = {
-    filteredNews: NewsType[];
+    filteredNews: NewsContentfulResponseType[];
     activeFilter: string;
 };

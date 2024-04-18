@@ -1,7 +1,7 @@
 "use client";
 
 import useNews from "@/app/utils/hooks";
-import { NewsType } from "@/app/utils/types/types";
+import { NewsContentfulResponseType, NewsType } from "@/app/utils/types/types";
 import News from "./News/News";
 import HighlightedNews from "./HighlightedNews/HighlightedNews";
 import "./NewsList.css";
@@ -13,7 +13,7 @@ const NewsList = () => {
 
     if (news.activeFilter === "all") {
         const highlightedIndex = news.filteredNews.findIndex(
-            (newsItem: NewsType) => newsItem.highlighted
+            (newsItem: NewsContentfulResponseType) => newsItem.fields.highlighted
         );
         highlightedNews = highlightedIndex !== -1 ? news.filteredNews[highlightedIndex] : null;
         remainingNews = news.filteredNews.filter((_news: NewsType, index: number) => index !== highlightedIndex);
@@ -23,9 +23,9 @@ const NewsList = () => {
 
     return (
         <div className="news-list">
-            {highlightedNews && <HighlightedNews highlightedNews={highlightedNews} />}
-            {remainingNews && remainingNews.map((newsItem: NewsType) => (
-                <News key={newsItem.id} newsItem={newsItem} />
+            {highlightedNews && <HighlightedNews highlightedNews={highlightedNews.fields} />}
+            {remainingNews && remainingNews.map((newsItem: NewsContentfulResponseType) => (
+                <News key={newsItem.sys.id} newsItem={newsItem.fields} />
             ))}
         </div>
     );
