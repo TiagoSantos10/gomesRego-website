@@ -1,5 +1,5 @@
 import { Almarai } from "next/font/google";
-import news from "@/app/utils/dummy/news";
+import { getCategories, getNews } from "@/services/apis/contentful/contentful";
 import FiltersSection from "../components/NewsPage/FiltersSection/FiltersSection";
 import NewsList from "../components/NewsPage/NewsList/NewsList";
 import NewsProvider from "../components/NewsPage/NewsProvider/NewsProvider";
@@ -10,9 +10,12 @@ const almarai = Almarai({
     weight: "400"
 });
 
-const News = () => {
+const News = async () => {
+    const news = await getNews();
+    const categories = await getCategories();
+
     return (
-        <NewsProvider initialNews={news}>
+        <NewsProvider initialNews={news} filters={categories}>
             <section>
                 <h1 className={`${almarai.className} section-title`}>Notícias</h1>
                 <FiltersSection />

@@ -8,10 +8,10 @@ type HighlightedNewsProps = {
 const HighlightedNews: React.FC<HighlightedNewsProps> = ({ highlightedNews }) => {
     return (
         <div className="highlighted-news">
-            <img src={highlightedNews.image} alt={highlightedNews.title} className="highlighted-news-img" />
+            <img src={highlightedNews.image.fields.file.url} alt={highlightedNews.title} className="highlighted-news-img" />
             <div className="highlighted-news-content">
                 <h2 className="highlighted-news-title">{highlightedNews.title}</h2>
-                <p className="highlighted-news-description">{highlightedNews.content}</p>
+                <p className="highlighted-news-description">{highlightedNews.description}</p>
             </div>
         </div>
     );

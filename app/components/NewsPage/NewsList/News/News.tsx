@@ -8,9 +8,9 @@ type NewsProps = {
 const News: React.FC<NewsProps> = ({ newsItem }) => {
     return (
         <div className="news">
-            <img className="news-img" src={newsItem.image} alt={newsItem.title} />
+            <img className="news-img" src={newsItem.image.fields.file.url} alt={newsItem.title} />
             <h2 className="news-title">{newsItem.title}</h2>
-            <p className="news-description">{newsItem.content}</p>
+            <p className="news-description">{newsItem.description}</p>
         </div>
     );
 };
