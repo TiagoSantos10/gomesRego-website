@@ -19,3 +19,9 @@ export const getCategories = async () => {
     const response = await client.getEntries({ content_type: "newsCategory" });
     return response.items;
 };
+
+export const getNewsPage = async () => {
+    const client = createClient();
+    const response = await client.getEntries({ content_type: "newsPage" });
+    return response.items[0].fields;
+};
