@@ -41,3 +41,13 @@ export const getNewsPage = async () => {
     const response = await client.getEntries({ content_type: "newsPage" });
     return response.items[0].fields;
 };
+
+/**
+ * Function to get the team members from Contentful
+ * @returns {Array} Array containing the team members
+ */
+export const getTeamPage = async () => {
+    const client = createClient();
+    const response = await client.getEntries({ content_type: "teamPage" });
+    return response.items[0].fields;
+};

@@ -50,3 +50,17 @@ export type NewsContextType = {
     filteredNews: NewsContentfulResponseType[];
     activeFilter: string;
 };
+
+export type TeamMemberType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        name: string;
+        description: string[];
+        email: string;
+        facebook: string;
+        linkedin: string;
+        image: NewsImageType;
+    }
+};

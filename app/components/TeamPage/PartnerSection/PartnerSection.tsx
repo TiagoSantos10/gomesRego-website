@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image, { StaticImageData } from "next/image";
 import { Almarai } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -14,7 +13,7 @@ const almarai = Almarai({
 });
 
 type PartnerSectionProps = {
-    image: StaticImageData;
+    image: string;
     name: string;
     description: string[];
     email: string;
@@ -48,7 +47,7 @@ const PartnerSection = ({
     return (
         <div ref={divRef} className={`partner-section align-${imageAlignment} background-${variant}`}>
             <div className="partner-image">
-                <Image src={image} alt={name} width={300} height={300} />
+                <img src={image} alt={name} />
             </div>
             <div className="partner-content">
                 <h1 className={almarai.className}>{name}</h1>

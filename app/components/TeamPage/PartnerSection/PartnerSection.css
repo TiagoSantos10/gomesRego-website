@@ -1,9 +1,18 @@
 .partner-section {
     display: flex;
-    gap: 65px;
     justify-content: center;
     align-items: center;
     padding: 100px var(--large-spacing);
+}
+
+.partner-image {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+img {
+    width: 300px;
 }
 
 .align-right {
@@ -25,6 +34,8 @@
     max-width: 1000px;
     display: flex;
     flex-direction: column;
+    width: 50%;
+    padding: 0 70px;
 }
 
 h1 {
