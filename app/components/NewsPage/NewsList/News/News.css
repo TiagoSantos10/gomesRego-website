@@ -32,3 +32,10 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
+
+.news-link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}

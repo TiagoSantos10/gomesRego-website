@@ -61,7 +61,7 @@ const Navbar = () => {
                                 </a>
                                 <a
                                     href="/news"
-                                    className={pathname === "/news" ? "active" : ""}
+                                    className={pathname.includes("news") ? "active" : ""}
                                 >
                         Noticias
                                 </a>
@@ -104,7 +104,7 @@ const Navbar = () => {
                                 <li>
                                     <a
                                         href="/news"
-                                        className={pathname === "/news" ? "active" : ""}
+                                        className={pathname.includes("/news") ? "active" : ""}
                                     > Noticias
                                     </a>
                                 </li>
