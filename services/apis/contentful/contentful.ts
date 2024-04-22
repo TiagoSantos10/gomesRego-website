@@ -51,3 +51,13 @@ export const getTeamPage = async () => {
     const response = await client.getEntries({ content_type: "teamPage" });
     return response.items[0].fields;
 };
+
+/**
+ * Function to get the services page content from Contentful
+ * @returns {Object} Object containing the services page content
+ */
+export const getServicesPage = async () => {
+    const client = createClient();
+    const response = await client.getEntries({ content_type: "servicesPage" });
+    return response.items[0].fields;
+};

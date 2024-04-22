@@ -7,7 +7,7 @@ export type NewsCategoriesType = {
     }
 };
 
-type NewsImageType = {
+export type NewsImageType = {
     sys: {
         id: string;
     },
@@ -62,5 +62,15 @@ export type TeamMemberType = {
         facebook: string;
         linkedin: string;
         image: NewsImageType;
+    }
+};
+
+export type ServicesType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        name: string;
+        serviceImage: NewsImageType;
     }
 };

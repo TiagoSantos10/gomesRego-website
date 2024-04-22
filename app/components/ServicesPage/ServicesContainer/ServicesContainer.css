@@ -37,6 +37,10 @@
         }
     }
 
+    .services-icon {
+        width: 50%;
+    }
+
     .swiper-button-prev {
         color: var(--gras-background-blue);
     }
