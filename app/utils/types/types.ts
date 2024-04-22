@@ -27,6 +27,7 @@ export type NewsContentfulResponseType = {
     },
     fields: {
         title: string;
+        slug: string;
         description: string;
         image: NewsImageType;
         date: string;
@@ -38,6 +39,7 @@ export type NewsContentfulResponseType = {
 
 export type NewsType = {
     title: string;
+    slug: string;
     description: string;
     image: NewsImageType;
     date: string;

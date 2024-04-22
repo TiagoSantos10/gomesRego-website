@@ -40,3 +40,8 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
+
+.highlighted-news-link {
+    color: black;
+    text-decoration: none;
+}

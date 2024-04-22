@@ -61,3 +61,14 @@ export const getServicesPage = async () => {
     const response = await client.getEntries({ content_type: "servicesPage" });
     return response.items[0].fields;
 };
+
+/**
+ * Function to get the detailed news item from Contentful by slug
+ * @param slug the slug of the news item
+ * @returns {Object} Object containing the detailed news item
+ */
+export const getDetailedNews = async (slug: string) => {
+    const client = createClient();
+    const response = await client.getEntries({ content_type: "news", "fields.slug": slug });
+    return response.items[0].fields;
+};
