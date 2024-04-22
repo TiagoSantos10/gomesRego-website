@@ -3,6 +3,7 @@
 import { Almarai } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
+import { ServicesType } from "@/app/utils/types/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,22 +16,33 @@ const almarai = Almarai({
 });
 
 type SwiperSlideElementType = {
-    text: string
+    text: string;
+    icon: string;
 };
 
-const SwiperSlideElement = ({ text }: SwiperSlideElementType) => {
+const SwiperSlideElement = ({ text, icon }: SwiperSlideElementType) => {
     return (
         <div className="item">
-            <div className="item-circle" />
+            <div className="item-circle">
+                <img src={icon} alt={text} className="services-icon" />
+            </div>
             <div className="item-text">{text}</div>
         </div>
     );
 };
 
-const ServicesContainer = () => {
+type ServicesContainerProps = {
+    services: ServicesType[];
+    sectionHeader: string;
+};
+
+const ServicesContainer: React.FC<ServicesContainerProps> = ({
+    services,
+    sectionHeader
+}) => {
     return (
         <section className="services-container">
-            <h1 className={`${almarai.className} section-title`}>Serviços</h1>
+            <h1 className={`${almarai.className} section-title`}>{sectionHeader}</h1>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
                 slidesPerView={5}
@@ -39,36 +51,16 @@ const ServicesContainer = () => {
                 pagination={{ clickable: true }}
                 style={{ width: "100%", height: "200px"}}
             >
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Consultoria Contabilistica" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Consultoria Fiscal" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Corporate Financeiro" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Controlo Interno" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Auditoria de Contas" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Revisão Legal de Contas" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Due Diligence" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Projetos de Investimento" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Formação nas Áreas Especificas de Atividade" />
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <SwiperSlideElement text="Avaliação e Reestruturação de Empresas" />
-                </SwiperSlide>
+                {
+                    services.map((service, index) => (
+                        <SwiperSlide key={index} className="swiper-slide">
+                            <SwiperSlideElement
+                                text={service.fields.name}
+                                icon={service.fields.serviceImage.fields.file.url}
+                            />
+                        </SwiperSlide>
+                    ))
+                }
             </Swiper>
         </section>
     );

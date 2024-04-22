@@ -7,7 +7,7 @@ export type NewsCategoriesType = {
     }
 };
 
-type NewsImageType = {
+export type NewsImageType = {
     sys: {
         id: string;
     },
@@ -49,4 +49,28 @@ export type NewsType = {
 export type NewsContextType = {
     filteredNews: NewsContentfulResponseType[];
     activeFilter: string;
+};
+
+export type TeamMemberType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        name: string;
+        description: string[];
+        email: string;
+        facebook: string;
+        linkedin: string;
+        image: NewsImageType;
+    }
+};
+
+export type ServicesType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        name: string;
+        serviceImage: NewsImageType;
+    }
 };

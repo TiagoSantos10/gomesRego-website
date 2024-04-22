@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Almarai } from "next/font/google";
+import { NewsImageType } from "@/app/utils/types/types";
 import SectorItem from "./SectorItem/SectorItem";
 import "./Sector.css";
 
@@ -14,9 +15,10 @@ type SectorProps = {
     title: string;
     items: string[];
     imageAlignment: "left" | "right";
+    image: NewsImageType;
 };
 
-const Sector = ({ title, items, imageAlignment }: SectorProps) => {
+const Sector = ({ title, items, imageAlignment, image }: SectorProps) => {
     const divRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -45,7 +47,7 @@ const Sector = ({ title, items, imageAlignment }: SectorProps) => {
                 }
             </div>
             <div className="sector-image">
-                <div className="public-img" />
+                <img className="public-img" src={image.fields.file.url} alt={title} />
             </div>
         </div>
     );

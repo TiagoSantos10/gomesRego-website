@@ -1,30 +1,42 @@
 import { Almarai } from "next/font/google";
-import "./ActivitySectorsContainer.css";
+import { NewsImageType } from "@/app/utils/types/types";
 import Sector from "./Sector/Sector";
+import "./ActivitySectorsContainer.css";
 
 const almarai = Almarai({
     subsets: ["arabic"],
     weight: "400"
 });
 
-const publicSectorItems = [
-    "Entidades Reguladoras",
-    "Institutos Públicos, Entidades Públicas Empresariais",
-    "Entidades Empresariais Municipais, Municípios, Serviços Municipalizados e  Associações de Municípios",
-];
+type ActivitySectorsContainerProps = {
+    publicSectorItems: string[];
+    privateSectorItems: string[];
+    sectionHeader: string;
+    publicSectorImage: NewsImageType;
+    privateSectorImage: NewsImageType;
+};
 
-const privateSectorItems = [
-    "Agricultura, Pescas, Aquacultura, Avicultura, Pecuária, Vitivinicultura, Agro-indústria",
-    "Construção Civil e Obras Públicas",
-    "Indústria Transformadora, Comércio e Prestação de Serviços",
-    "Promoção Imobiliária e Gestão de Participações Sociais",
-];
-
-const ActivitySectorsContainer = () => (
+const ActivitySectorsContainer: React.FC<ActivitySectorsContainerProps> = ({
+    publicSectorItems,
+    privateSectorItems,
+    sectionHeader,
+    publicSectorImage,
+    privateSectorImage
+}) => (
     <section className="sectors-container">
-        <h1 className={`${almarai.className} section-title`}>Setores de Atividade</h1>
-        <Sector title="Setor Público" items={publicSectorItems} imageAlignment="right" />
-        <Sector title="Setor Privado" items={privateSectorItems} imageAlignment="left" />
+        <h1 className={`${almarai.className} section-title`}>{sectionHeader}</h1>
+        <Sector
+            title="Setor Público"
+            items={publicSectorItems}
+            imageAlignment="right"
+            image={publicSectorImage}
+        />
+        <Sector
+            title="Setor Privado"
+            items={privateSectorItems}
+            imageAlignment="left"
+            image={privateSectorImage}
+        />
     </section>
 );
 
