@@ -1,8 +1,8 @@
-section {
+.section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-    padding-left: 85px;
-    padding-right: 85px;
+    padding-left: var(--large-spacing);
+    padding-right: var(--large-spacing);
 }

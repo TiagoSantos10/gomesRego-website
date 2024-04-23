@@ -1,7 +1,7 @@
 import { Almarai } from "next/font/google";
 import { NewsImageType } from "@/app/utils/types/types";
 import Sector from "./Sector/Sector";
-import "./ActivitySectorsContainer.css";
+import styles from "./ActivitySectorsContainer.module.css";
 
 const almarai = Almarai({
     subsets: ["arabic"],
@@ -23,7 +23,7 @@ const ActivitySectorsContainer: React.FC<ActivitySectorsContainerProps> = ({
     publicSectorImage,
     privateSectorImage
 }) => (
-    <section className="sectors-container">
+    <section className={styles.sectorsContainer}>
         <h1 className={`${almarai.className} section-title`}>{sectionHeader}</h1>
         <Sector
             title="Setor Público"

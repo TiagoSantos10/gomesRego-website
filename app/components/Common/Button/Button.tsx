@@ -1,4 +1,4 @@
-import "./Button.css";
+import styles from "./Button.module.css";
 
 type ButtonProps = {
     text: string;
@@ -14,7 +14,7 @@ const Button = ({
     onClick = () => {}
 }: ButtonProps) => {
     return (
-        <button className={`gras-btn ${size} ${isSelected ? "selected" : ""}`} onClick={onClick}>{text}</button>
+        <button className={`${styles.grasBtn} ${styles[size]} ${isSelected ? `${styles.selected}` : ""}`} onClick={onClick}>{text}</button>
     );
 };
 

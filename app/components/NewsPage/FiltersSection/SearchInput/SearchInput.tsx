@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../../../../../public/fontawesome";
 import { useRef } from "react";
 import useNews from "@/app/utils/hooks";
-import "./SearchInput.css";
+import styles from "./SearchInput.module.css";
 
 const SearchInput = () => {
     const { setSearch } = useNews();
@@ -19,18 +19,17 @@ const SearchInput = () => {
     };
 
     return (
-        <div className="search-input">
-            <form onSubmit={handleInputSearch}>
+        <div className={styles.searchInput}>
+            <form onSubmit={handleInputSearch} className={styles.form}>
                 <input
                     ref={inputRef}
-                    className="search-input-bar"
+                    className={styles.searchInputBar}
                     type="text"
                     placeholder="Pesquisar..."
                     onBlur={handleInputSearch}
                 />
-                <button className="submit-btn" type="submit">
+                <button className={styles.submitBtn} type="submit">
                     <FontAwesomeIcon
-                        className="search-icon"
                         icon={["fas", "magnifying-glass"]} 
                         size="1x"
                         color="var(--gras-background-blue)"

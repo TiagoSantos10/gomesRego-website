@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 
-.news-img {
+.newsImg {
     border-radius: 35px;
     align-self: center;
     margin-top: 10px;
@@ -15,13 +15,13 @@
     object-fit: cover;
 }
 
-.news-title {
+.newsTitle {
     font-size: 16px;
     font-weight: 600;
     margin: 15px 20px;
 }
 
-.news-description {
+.newsDescription {
     font-size: 14px;
     opacity: 0.7;
     margin: 0 20px 15px 20px;;
@@ -33,7 +33,7 @@
     overflow: hidden;
 }
 
-.news-link {
+.newsLink {
     color: black;
     text-decoration: none;
     display: flex;

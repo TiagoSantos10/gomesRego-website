@@ -7,18 +7,18 @@
     justify-content: space-between;
     align-items: center;
 
-    .footer-socials {
+    .footerSocials {
         display: flex;
         flex-direction: row;
-        margin-left: 50px;
+        margin-left: var(--large-spacing);
 
-        a {
+        .links {
             margin-right: 15px;
         }
     }
 
-    .footer-text {
+    .footerText {
         font-size: 12px;
-        margin-right: 50px;
+        margin-right: var(--large-spacing);
     }
 }

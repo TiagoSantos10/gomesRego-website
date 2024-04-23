@@ -1,11 +1,11 @@
-.sector-container {
+.sectorContainer {
     margin-bottom: 50px;
     min-height: 350px;
     display: flex;
     justify-content: space-between;
     gap: 150px;
 
-    .sector-content {
+    .sectorContent {
         display: flex;
         flex-direction: column;
         width: 50%;
@@ -13,12 +13,12 @@
         justify-content: center;
     }
 
-    .sector-image {
+    .sectorImage {
         width: 50%;
         display: flex;
         justify-content: flex-end;
 
-        .public-img {
+        .publicImg {
             width: 350px;
             height: 100%;
             border-radius: 20px;
@@ -27,7 +27,7 @@
     }
 }
 
-h3 {
+.headingTitle {
     color: var(--gras-background-blue);
     font-size: 25px;
 
@@ -37,7 +37,13 @@ h3 {
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
-.sector-item {
+.sectorItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
     /* animation */
     opacity: 0;
     transform: translateX(-30px);
@@ -49,13 +55,13 @@ h3 {
     flex-direction: row-reverse;
 }
 
-.slide-in > .sector-content > h3 {
+.slideIn > .sectorContent > .headingTitle {
     /* animation */
     opacity: 1;
     transform: translateX(0);
 }
 
-.slide-in > .sector-content > .sector-item {
+.slideIn > .sectorContent > .sectorItem {
     /* animation */
     opacity: 1;
     transform: translateX(0);

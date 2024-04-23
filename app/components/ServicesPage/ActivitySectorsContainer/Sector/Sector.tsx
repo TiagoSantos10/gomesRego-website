@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { Almarai } from "next/font/google";
 import { NewsImageType } from "@/app/utils/types/types";
 import SectorItem from "./SectorItem/SectorItem";
-import "./Sector.css";
+import styles from "./Sector.module.css";
 
 const almarai = Almarai({
     subsets: ["arabic"],
@@ -20,6 +20,7 @@ type SectorProps = {
 
 const Sector = ({ title, items, imageAlignment, image }: SectorProps) => {
     const divRef = useRef<HTMLDivElement>(null);
+    const alignmentClass = `align-${imageAlignment}`;
 
     useEffect(() => {
         if (!divRef.current) return;
@@ -27,7 +28,7 @@ const Sector = ({ title, items, imageAlignment, image }: SectorProps) => {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && divRef.current) {
-                    divRef.current.classList.add("slide-in");
+                    divRef.current.classList.add(styles.slideIn);
                     observer.unobserve(divRef.current);
                 }
             });
@@ -37,17 +38,19 @@ const Sector = ({ title, items, imageAlignment, image }: SectorProps) => {
     }, []);
 
     return (
-        <div ref={divRef} className={`sector-container align-${imageAlignment}`}>
-            <div className="sector-content">
-                <h3 className={almarai.className}>{title}</h3>
+        <div ref={divRef} className={`${styles.sectorContainer} ${styles[alignmentClass]}`}>
+            <div className={styles.sectorContent}>
+                <h3 className={`${almarai.className} ${styles.headingTitle}`}>{title}</h3>
                 {
                     items.map((item, index) => (
-                        <SectorItem key={index} text={item} />
+                        <div className={styles.sectorItem} key={index}>
+                            <SectorItem text={item} />
+                        </div>
                     ))
                 }
             </div>
-            <div className="sector-image">
-                <img className="public-img" src={image.fields.file.url} alt={title} />
+            <div className={styles.sectorImage}>
+                <img className={styles.publicImg} src={image.fields.file.url} alt={title} />
             </div>
         </div>
     );

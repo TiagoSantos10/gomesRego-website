@@ -1,5 +1,5 @@
 import { Italianno } from "next/font/google";
-import "./CompanyCover.css";
+import styles from "./CompanyCover.module.css";
 
 const italianno = Italianno({
     subsets: ["latin"],
@@ -7,13 +7,13 @@ const italianno = Italianno({
 });
 
 const CompanyCover = () => (
-    <section className="company-cover-section">
-        <div className="text-inside-img">
-            <div className="upper-text">Há mais de</div>
-            <div className={`middle-text ${italianno.className}`}>5</div>
-            <div className="bottom-text">anos</div>
+    <section className={styles.companyCoverSection}>
+        <div className={styles.textInsideImg}>
+            <div className={styles.upperText}>Há mais de</div>
+            <div className={`${styles.middleText} ${italianno.className}`}>5</div>
+            <div className={styles.bottomText}>anos</div>
         </div>
-        <div className="gras-img" />
+        <div className={styles.grasImg} />
     </section>
 );
 

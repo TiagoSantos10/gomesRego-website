@@ -3,7 +3,7 @@ import { getCategories, getNews, getNewsPage } from "@/services/apis/contentful/
 import FiltersSection from "../components/NewsPage/FiltersSection/FiltersSection";
 import NewsList from "../components/NewsPage/NewsList/NewsList";
 import NewsProvider from "../components/NewsPage/NewsProvider/NewsProvider";
-import "./NewsPage.css";
+import styles from "./NewsPage.module.css";
 
 const almarai = Almarai({
     subsets: ["arabic"],
@@ -17,7 +17,7 @@ const News = async () => {
 
     return (
         <NewsProvider initialNews={news} filters={categories}>
-            <section>
+            <section className={styles.section}>
                 <h1 className={`${almarai.className} section-title`}>{newsHeader}</h1>
                 <FiltersSection />
                 <NewsList />

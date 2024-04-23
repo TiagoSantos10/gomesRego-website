@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../../../../../../public/fontawesome";
-import "./SectorItem.css";
+import styles from "./SectorItem.module.css";
 
 type SectorItemProps = {
     text: string;
@@ -9,15 +9,15 @@ type SectorItemProps = {
 
 const SectorItem = ({ text }: SectorItemProps) => {
     return (
-        <div className="sector-item">
+        <>
             <FontAwesomeIcon
                 icon={["far", "circle-check"]}
                 size="1x"
                 color="var(--gras-purple)"
-                className="circle-icon"
+                className={styles.circleIcon}
             />
             <div>{text}</div>
-        </div>
+        </>
     );
 };
 
