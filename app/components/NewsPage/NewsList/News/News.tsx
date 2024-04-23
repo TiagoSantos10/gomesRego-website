@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NewsType } from "@/app/utils/types/types";
-import "./News.css";
+import styles from "./News.module.css";
 
 type NewsProps = {
     newsItem: NewsType;
@@ -8,11 +8,15 @@ type NewsProps = {
 
 const News: React.FC<NewsProps> = ({ newsItem }) => {
     return (
-        <div className="news">
-            <Link href={`/news/${newsItem.slug}`} className="news-link">
-                <img className="news-img" src={newsItem.image.fields.file.url} alt={newsItem.title} />
-                <h2 className="news-title">{newsItem.title}</h2>
-                <p className="news-description">{newsItem.description}</p>
+        <div className={styles.news}>
+            <Link href={`/news/${newsItem.slug}`} className={styles.newsLink}>
+                <img
+                    className={styles.newsImg}
+                    src={newsItem.image.fields.file.url}
+                    alt={newsItem.title}
+                />
+                <h2 className={styles.newsTitle}>{newsItem.title}</h2>
+                <p className={styles.newsDescription}>{newsItem.description}</p>
             </Link>
         </div>
     );

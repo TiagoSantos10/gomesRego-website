@@ -1,4 +1,4 @@
-#about-section-container {
+#aboutSectionContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,16 +15,8 @@
 }
 
 @media (max-width: 792px) {
-    #about-section-container {
+    #aboutSectionContainer {
         padding-top: 10px;
-
-        .heading-title {
-            color: var(--gras-background-blue);
-            font-size: 30px;
-            font-weight: 600;
-            margin-top: 60px;
-            margin-bottom: 34px;
-        }
 
         .description {
             color: #000;

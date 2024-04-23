@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/manipulation";
-import "./ServicesContainer.css";
+import styles from "./ServicesContainer.module.css";
 
 const almarai = Almarai({
     subsets: ["arabic"],
@@ -22,11 +22,11 @@ type SwiperSlideElementType = {
 
 const SwiperSlideElement = ({ text, icon }: SwiperSlideElementType) => {
     return (
-        <div className="item">
-            <div className="item-circle">
-                <img src={icon} alt={text} className="services-icon" />
+        <div className={styles.item}>
+            <div className={styles.itemCircle}>
+                <img src={icon} alt={text} className={styles.servicesIcon} />
             </div>
-            <div className="item-text">{text}</div>
+            <div className={styles.itemText}>{text}</div>
         </div>
     );
 };
@@ -41,7 +41,7 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
     sectionHeader
 }) => {
     return (
-        <section className="services-container">
+        <section className={styles.servicesContainer}>
             <h1 className={`${almarai.className} section-title`}>{sectionHeader}</h1>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
@@ -53,7 +53,7 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
             >
                 {
                     services.map((service, index) => (
-                        <SwiperSlide key={index} className="swiper-slide">
+                        <SwiperSlide key={index} className={styles["swiper-slide"]}>
                             <SwiperSlideElement
                                 text={service.fields.name}
                                 icon={service.fields.serviceImage.fields.file.url}

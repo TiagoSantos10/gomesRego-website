@@ -4,7 +4,7 @@ import useNews from "@/app/utils/hooks";
 import { NewsContentfulResponseType, NewsType } from "@/app/utils/types/types";
 import News from "./News/News";
 import HighlightedNews from "./HighlightedNews/HighlightedNews";
-import "./NewsList.css";
+import styles from "./NewsList.module.css";
 
 const NewsList = () => {
     const { news } = useNews();
@@ -22,7 +22,7 @@ const NewsList = () => {
     }
 
     return (
-        <div className="news-list">
+        <div className={styles.newsList}>
             {highlightedNews && <HighlightedNews highlightedNews={highlightedNews.fields} />}
             {remainingNews && remainingNews.map((newsItem: NewsContentfulResponseType) => (
                 <News key={newsItem.sys.id} newsItem={newsItem.fields} />

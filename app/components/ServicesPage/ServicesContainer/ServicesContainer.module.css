@@ -1,4 +1,4 @@
-.services-container {
+.servicesContainer {
     display: flex;
     flex-direction: column;
     padding: 50px var(--large-spacing) 30px var(--large-spacing);
@@ -15,7 +15,7 @@
             align-items: center;
             justify-content: center;
 
-            .item-circle {
+            .itemCircle {
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
@@ -26,7 +26,7 @@
                 margin-bottom: 20px;
             }
 
-            .item-text {
+            .itemText {
                 color: var(--gras-background-blue);
                 font-size: 12px;
                 font-weight: 500;
@@ -37,7 +37,7 @@
         }
     }
 
-    .services-icon {
+    .servicesIcon {
         width: 50%;
     }
 

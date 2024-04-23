@@ -3,7 +3,7 @@
 import Button from "@/app/components/Common/Button/Button";
 import useNews from "@/app/utils/hooks";
 import { NewsCategoriesType } from "@/app/utils/types/types";
-import "./OptionsSection.css";
+import styles from "./OptionsSection.module.css";
 
 const OptionsSection = () => {
     const { news, setFilter, filters } = useNews();
@@ -15,7 +15,7 @@ const OptionsSection = () => {
     };
 
     return (
-        <div className="options-section">
+        <div className={styles.optionsSection}>
             {filters.map((option: NewsCategoriesType, index: number) => (
                 <Button
                     key={index}

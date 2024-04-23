@@ -1,4 +1,4 @@
-.company-cover-section {
+.companyCoverSection {
     background-color: var(--gras-background-blue);
     width: 100%;
     height: 65vh;
@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
 
-    .gras-img {
+    .grasImg {
         width: 60%;
         height: 100%;
         background: url('../../../../public/assets/gras-img.png') no-repeat;
@@ -15,14 +15,14 @@
         background-position-y: center;
     }
 
-    .text-inside-img {
+    .textInsideImg {
         display: flex;
         flex-direction: column;
         width: 40%;
         height: 100%;
         margin: 0 50px;
 
-        .upper-text {
+        .upperText {
             padding-top: 30px;
             flex: 1;
             font-size: 28px;
@@ -32,7 +32,7 @@
             opacity: 0.2;
         }
 
-        .middle-text {
+        .middleText {
             flex: 1;
             font-size: 250px;
             display: flex;
@@ -42,7 +42,7 @@
             opacity: 0.2;
         }
 
-        .bottom-text {
+        .bottomText {
             padding-bottom: 30px;
             flex: 1;
             font-size: 28px;
@@ -56,7 +56,7 @@
 }
 
 @media (max-width: 792px) {
-    .company-cover-section {
+    .companyCoverSection {
         flex-direction: column;
         height: 400px;
         width: 100%;
@@ -64,7 +64,7 @@
         padding-top: 65px;
         background-color: var(--gras-background-blue);
 
-        .gras-img {
+        .grasImg {
             width: 100%;
             height: 100%;
             background: url('../../../../public/assets/gras-img.png') no-repeat;
@@ -73,7 +73,7 @@
             background-position-y: center;
         }
 
-        .text-inside-img {
+        .textInsideImg {
             display: none;
         }
     }

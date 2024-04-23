@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@/public/fontawesome";
-import "./DetailedNews.css";
 import { NewsType } from "@/app/utils/types/types";
+import styles from "./DetailedNews.module.css";
 
 type DetailedNewsProps = {
     news: NewsType;
@@ -14,17 +14,17 @@ const DetailedNews: React.FC<DetailedNewsProps> = ({ news }) => {
     const markdownExtraContent = extraContent && marked.parse(extraContent);
 
     return (
-        <section className="detailed-news-container">
+        <section className={styles.detailedNewsContainer}>
             <h1 className="section-title">{title}</h1>
-            <div className="detailed-news-content">
-                <img src={image.fields.file.url} alt={slug} className="detailed-news-img" />
-                <div className="detailed-news-date-content">
+            <div className={styles.detailedNewsContent}>
+                <img src={image.fields.file.url} alt={slug} className={styles.detailedNewsImg} />
+                <div className={styles.detailedNewsDateContent}>
                     <FontAwesomeIcon
                         icon={["far", "calendar"]}
                         size="xs"
                         color="var(--gras-gray)"
                     />
-                    <div className="detailed-news-date">{date}</div>
+                    <div className={styles.detailedNewsDate}>{date}</div>
                 </div>
                 <p>{description}</p>
                 {extraContent && (

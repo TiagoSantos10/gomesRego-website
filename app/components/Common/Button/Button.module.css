@@ -1,4 +1,4 @@
-.gras-btn {
+.grasBtn {
     border: 2px solid var(--gras-background-blue);
     border-radius: 5px;
     color: var(--gras-background-blue);
@@ -10,7 +10,7 @@
     text-transform: uppercase;
 }
 
-.gras.btn:hover, .selected {
+.grasBtn:hover, .selected {
     background-color: var(--gras-background-blue);
     color: white;
 }

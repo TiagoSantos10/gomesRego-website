@@ -1,10 +1,10 @@
 import OptionsSection from "./OptionsSection/OptionsSection";
 import SearchInput from "./SearchInput/SearchInput";
-import "./FiltersSection.css";
+import styles from "./FiltersSection.module.css";
 
 const FiltersSection = () => {
     return (
-        <div className="filters-section">
+        <div className={styles.filtersSection}>
             <OptionsSection />
             <SearchInput />
         </div>

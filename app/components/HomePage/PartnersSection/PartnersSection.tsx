@@ -1,5 +1,5 @@
 import { Almarai } from "next/font/google";
-import "./PartnersSection.css";
+import styles from "./PartnersSection.module.css";
 
 const almarai = Almarai({
     subsets: ["arabic"],
@@ -7,22 +7,22 @@ const almarai = Almarai({
 });
 
 const PartnersSection = () => (
-    <section id="partners-section">
+    <section id={styles.partnersSection}>
         <h1 className={`section-title ${almarai.className}`}>
             Parceiros
         </h1>
-        <div className="partners-content">
-            <div className="item">
-                <div className="dulce-gomes-img" />
-                <div className="partner-name">Dulce Gomes</div>
+        <div className={styles.partnersContent}>
+            <div className={styles.item}>
+                <div className={styles.dulceGomesImg} />
+                <div className={styles.partnerName}>Dulce Gomes</div>
             </div>
-            <div className="item">
-                <div className="antonio-moura-img" />
-                <div className="partner-name">António Moura e Sá</div>
+            <div className={styles.item}>
+                <div className={styles.antonioMouraImg} />
+                <div className={styles.partnerName}>António Moura e Sá</div>
             </div>
-            <div className="item">
-                <div className="marianela-rego-img" />
-                <div className="partner-name">Marianela Rego</div>
+            <div className={styles.item}>
+                <div className={styles.marianelaRegoImg} />
+                <div className={styles.partnerName}>Marianela Rego</div>
             </div>
         </div>
     </section>

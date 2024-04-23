@@ -1,14 +1,14 @@
-.search-input {
+.searchInput {
     display: flex;
     position: relative;
     width: 20%;
 }
 
-form {
+.form {
     width: 100%;
 }
 
-.search-input-bar {
+.searchInputBar {
     height: 35px;
     border: 2px solid var(--gras-background-blue);
     border-radius: 5px;
@@ -19,7 +19,7 @@ form {
     text-indent: 10px;
 }
 
-.submit-btn {
+.submitBtn {
     position: absolute;
     top: 12px;
     right: 10px;

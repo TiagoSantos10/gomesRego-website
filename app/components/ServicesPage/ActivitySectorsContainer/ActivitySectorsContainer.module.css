@@ -1,11 +1,6 @@
-.sectors-container {
+.sectorsContainer {
     display: flex;
     flex-direction: column;
     padding-left: var(--large-spacing);
     padding-right: var(--large-spacing);
-
-    h3 {
-        color: var(--gras-background-blue);
-        font-size: 25px;
-    }
 }
