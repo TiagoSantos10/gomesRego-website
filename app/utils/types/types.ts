@@ -1,3 +1,5 @@
+import { BLOCKS } from "@contentful/rich-text-types";
+
 export type NewsCategoriesType = {
     sys: {
         id: string;
@@ -33,7 +35,11 @@ export type NewsContentfulResponseType = {
         date: string;
         highlighted: boolean;
         category: NewsCategoriesType;
-        extraContent: string;
+        extraContent: {
+            nodeType: BLOCKS.DOCUMENT;
+            data: {};
+            content: [];
+        };
     }
 };
 
@@ -45,7 +51,11 @@ export type NewsType = {
     date: string;
     highlighted: boolean;
     category: NewsCategoriesType;
-    extraContent: string;
+    extraContent: {
+        nodeType: BLOCKS.DOCUMENT;
+        data: {};
+        content: [];
+    };
 };
 
 export type NewsContextType = {
