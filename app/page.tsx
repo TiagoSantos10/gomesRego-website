@@ -10,7 +10,7 @@ const App = async () => {
     return (
         <>
             <CompanyCover />
-            <AboutSection />
+            <AboutSection aboutSection={homePage.aboutSection} textAlignment="left" />
             <ApproachSection />
             <PartnersSection partners={homePage.partners} />
         </>
