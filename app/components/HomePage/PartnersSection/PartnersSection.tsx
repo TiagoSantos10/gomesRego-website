@@ -1,4 +1,6 @@
 import { Almarai } from "next/font/google";
+import { PartnersType } from "@/app/utils/types/types";
+import PartnerCard from "./PartnerCard/PartnerCard";
 import styles from "./PartnersSection.module.css";
 
 const almarai = Almarai({
@@ -6,24 +8,19 @@ const almarai = Almarai({
     weight: "400"
 });
 
-const PartnersSection = () => (
+type PartnersSectionProps = {
+    partners: PartnersType[];
+};
+
+const PartnersSection: React.FC<PartnersSectionProps> = ({ partners }) => (
     <section id={styles.partnersSection}>
         <h1 className={`section-title ${almarai.className}`}>
-            Parceiros
+            Sócios
         </h1>
         <div className={styles.partnersContent}>
-            <div className={styles.item}>
-                <div className={styles.dulceGomesImg} />
-                <div className={styles.partnerName}>Dulce Gomes</div>
-            </div>
-            <div className={styles.item}>
-                <div className={styles.antonioMouraImg} />
-                <div className={styles.partnerName}>António Moura e Sá</div>
-            </div>
-            <div className={styles.item}>
-                <div className={styles.marianelaRegoImg} />
-                <div className={styles.partnerName}>Marianela Rego</div>
-            </div>
+            {partners.map((partner) => (
+                <PartnerCard key={partner.sys.id} partner={partner} />
+            ))}
         </div>
     </section>
 );

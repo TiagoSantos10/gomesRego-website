@@ -1,98 +1,12 @@
 #partnersSection {
-    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 60px 0;
+    padding: var(--medium-spacing) var(--large-spacing);
 
     .partnersContent {
-        width: 60%;
-        border-radius: 70px;
-        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.1);
+        gap: 100px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        .item {
-            margin: 30px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .dulceGomesImg {
-                background-image: url('../../../../public/assets/dulce.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin-bottom: 15px;
-            }
-
-            .antonioMouraImg {
-                background-image: url('../../../../public/assets/antonio.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin-bottom: 15px;
-            }
-
-            .marianelaRegoImg {
-                background-image: url('../../../../public/assets/marianela.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin-bottom: 15px;
-            }
-
-            .partnerName {
-                font-size: 14px;
-                font-weight: 400;
-            }
-        }
-    }
-}
-
-@media (max-width: 792px) {
-    #partnersSection {
-        padding-top: 10px;
-
-        .partnersContent {
-            width: 95%;
-            display: flex;
-            flex-direction: row;
-            border-radius: 50px;
-
-            .item {
-                flex-shrink: 0;
-                margin: 30px 10px;
-
-                .dulceGomesImg {
-                    width: 100px;
-                    height: 100px;
-                }
-
-                .antonioMouraImg {
-                    width: 100px;
-                    height: 100px;
-                }
-
-                .marianelaRegoImg {
-                    width: 100px;
-                    height: 100px;
-                }
-
-                .partnerName {
-                    font-size: 12px;
-                }
-            }
-        }
+        justify-content: center;
     }
 }
