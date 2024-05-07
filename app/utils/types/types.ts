@@ -86,3 +86,37 @@ export type ServicesType = {
         serviceImage: NewsImageType;
     }
 };
+
+export type PartnersType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        name: string;
+        description: string;
+        image: {
+            sys: {
+                id: string;
+            },
+            fields: {
+                title: string;
+                file: {
+                    url: string;
+                }
+            }
+        };
+        linkedin: string;
+        facebook: string;
+        email: string;
+    }
+};
+
+export type HomePageType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        homePageEntry: string;
+        partners: PartnersType[];
+    }
+};

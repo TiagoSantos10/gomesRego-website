@@ -72,3 +72,13 @@ export const getDetailedNews = async (slug: string) => {
     const response = await client.getEntries({ content_type: "news", "fields.slug": slug });
     return response.items[0].fields;
 };
+
+/**
+ * Function to get the home page content from Contentful
+ * @returns {Object} Object containing the home page content
+ */
+export const getHomePage = async () => {
+    const client = createClient();
+    const response = await client.getEntries({ content_type: "homePage" });
+    return response.items[0].fields;
+};
