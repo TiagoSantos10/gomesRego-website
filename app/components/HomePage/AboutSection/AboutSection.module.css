@@ -1,27 +1,57 @@
 #aboutSectionContainer {
+    margin: var(--medium-spacing) var(--large-spacing);
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 60px var(--large-spacing);
-
-    .description {
-        color: #000;
-        font-size: 16px;
-        width: 100%;
-
-        background: url('../../../../public/assets/grasLogoBG.png') center no-repeat;
-        background-size: contain;
-    }
+    gap: 150px;
 }
 
-@media (max-width: 792px) {
-    #aboutSectionContainer {
-        padding-top: 10px;
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
 
-        .description {
-            color: #000;
-            font-size: 14px;
-            width: 80%;
-        }
-    }
+.alignRight {
+    flex-direction: row-reverse;
+}
+
+.bigTitle {
+    color: var(--gras-background-blue);
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.smallTitle {
+    color: var(--gras-background-blue);
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: var(--medium-spacing);
+}
+
+.workList {
+    list-style-type: none;
+}
+
+.listItem {
+    margin-bottom: 15px;
+}
+
+.faIcon {
+    margin-right: 10px;
+}
+
+.a {
+    text-decoration: none;
+    color: black;
+}
+
+.a:hover {
+    color: var(--gras-background-blue);
+}
+
+.aboutImage {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }

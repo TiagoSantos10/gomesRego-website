@@ -10,7 +10,7 @@ const almarai = Almarai({
 });
 
 const ApproachSection = () => (
-    <section id={styles.approachSection}>
+    <section className={styles.approachSection} id="approach">
         <h1 className={`${almarai.className} ${styles.headingTitle}`}>A nossa abordagem</h1>
         <div className={styles.approachGroup}>
             <div className={styles.groupRow}>
