@@ -11,7 +11,7 @@ const App = async () => {
         <>
             <CompanyCover />
             <AboutSection aboutSection={homePage.aboutSection} textAlignment="left" />
-            <ApproachSection />
+            <ApproachSection sectionHeader={homePage.approachSectionTitle} approachItems={homePage.approachItems} />
             <PartnersSection partners={homePage.partners} />
         </>
     );};

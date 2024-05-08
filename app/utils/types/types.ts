@@ -9,7 +9,7 @@ export type NewsCategoriesType = {
     }
 };
 
-export type NewsImageType = {
+export type ImageType = {
     sys: {
         id: string;
     },
@@ -31,7 +31,7 @@ export type NewsContentfulResponseType = {
         title: string;
         slug: string;
         description: string;
-        image: NewsImageType;
+        image: ImageType;
         date: string;
         highlighted: boolean;
         category: NewsCategoriesType;
@@ -47,7 +47,7 @@ export type NewsType = {
     title: string;
     slug: string;
     description: string;
-    image: NewsImageType;
+    image: ImageType;
     date: string;
     highlighted: boolean;
     category: NewsCategoriesType;
@@ -73,7 +73,7 @@ export type TeamMemberType = {
         email: string;
         facebook: string;
         linkedin: string;
-        image: NewsImageType;
+        image: ImageType;
     }
 };
 
@@ -83,7 +83,7 @@ export type ServicesType = {
     },
     fields: {
         name: string;
-        serviceImage: NewsImageType;
+        serviceImage: ImageType;
     }
 };
 
@@ -118,5 +118,16 @@ export type HomePageType = {
     fields: {
         homePageEntry: string;
         partners: PartnersType[];
+    }
+};
+
+export type ApproachItemType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        title: string;
+        description: string;
+        itemIcon: ImageType;
     }
 };
