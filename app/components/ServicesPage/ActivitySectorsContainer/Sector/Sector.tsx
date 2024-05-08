@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Almarai } from "next/font/google";
-import { NewsImageType } from "@/app/utils/types/types";
+import { ImageType } from "@/app/utils/types/types";
 import SectorItem from "./SectorItem/SectorItem";
 import styles from "./Sector.module.css";
 
@@ -15,7 +15,7 @@ type SectorProps = {
     title: string;
     items: string[];
     imageAlignment: "left" | "right";
-    image: NewsImageType;
+    image: ImageType;
 };
 
 const Sector = ({ title, items, imageAlignment, image }: SectorProps) => {

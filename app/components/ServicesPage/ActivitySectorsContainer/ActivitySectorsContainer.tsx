@@ -1,5 +1,5 @@
 import { Almarai } from "next/font/google";
-import { NewsImageType } from "@/app/utils/types/types";
+import { ImageType } from "@/app/utils/types/types";
 import Sector from "./Sector/Sector";
 import styles from "./ActivitySectorsContainer.module.css";
 
@@ -12,8 +12,8 @@ type ActivitySectorsContainerProps = {
     publicSectorItems: string[];
     privateSectorItems: string[];
     sectionHeader: string;
-    publicSectorImage: NewsImageType;
-    privateSectorImage: NewsImageType;
+    publicSectorImage: ImageType;
+    privateSectorImage: ImageType;
 };
 
 const ActivitySectorsContainer: React.FC<ActivitySectorsContainerProps> = ({
