@@ -1,12 +1,13 @@
 #aboutSectionContainer {
     margin: var(--medium-spacing) var(--large-spacing);
     display: flex;
-    gap: 200px;
+    gap: 150px;
 }
 
 .aboutContent {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .alignRight {
@@ -34,6 +35,10 @@
     margin-bottom: 15px;
 }
 
+.faIcon {
+    margin-right: 10px;
+}
+
 .a {
     text-decoration: none;
     color: black;
@@ -43,12 +48,10 @@
     color: var(--gras-background-blue);
 }
 
-.aboutImageContainer {
-    width: 50%;
-}
-
 .aboutImage {
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }

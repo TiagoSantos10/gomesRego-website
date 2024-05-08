@@ -1,6 +1,10 @@
 import { Almarai } from "next/font/google";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "@/public/fontawesome";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Link from "next/link";
 import styles from "./AboutSection.module.css";
 
 const almarai = Almarai({
@@ -57,12 +61,36 @@ const AboutSection: React.FC<AboutSectionProps> = ({ aboutSection, textAlignment
                 </div>
                 <h3 className={`${almarai.className} ${styles.smallTitle}`}>{smallTitle}</h3>
                 <ul className={styles.workList}>
-                    <li className={styles.listItem}><a className={styles.a} href="/#approach">Como atuamos</a></li>
-                    <li className={styles.listItem}><a className={styles.a} href="/services">Onde atuamos</a></li>
-                    <li className={styles.listItem}><a className={styles.a} href="/contacts">Onde estamos</a></li>
+                    <li className={styles.listItem}>
+                        <FontAwesomeIcon
+                            icon={["fas", "arrow-right"]}
+                            size="1x"
+                            color="var(--gras-purple)"
+                            className={styles.faIcon}
+                        />
+                        <Link className={styles.a} href="#approach">A nossa abordagem</Link>
+                    </li>
+                    <li className={styles.listItem}>
+                        <FontAwesomeIcon
+                            icon={["fas", "arrow-right"]}
+                            size="1x"
+                            color="var(--gras-purple)"
+                            className={styles.faIcon}
+                        />
+                        <Link className={styles.a} href="/services">Os nossos serviços</Link>
+                    </li>
+                    <li className={styles.listItem}>
+                        <FontAwesomeIcon
+                            icon={["fas", "arrow-right"]}
+                            size="1x"
+                            color="var(--gras-purple)"
+                            className={styles.faIcon}
+                        />
+                        <Link className={styles.a} href="/contacts">Os nossos escritórios</Link>
+                    </li>
                 </ul>
             </div>
-            <div className={styles.aboutImageContainer}>
+            <div>
                 <img
                     src={image.fields.file.url}
                     alt="About us Section Image"
