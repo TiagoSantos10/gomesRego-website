@@ -82,3 +82,13 @@ export const getHomePage = async () => {
     const response = await client.getEntries({ content_type: "homePage" });
     return response.items[0].fields;
 };
+
+/**
+ * Function to get the contacts page content from Contentful
+ * @returns {Object} Object containing the contacts page content
+ */
+export const getContactsPage = async () => {
+    const client = createClient();
+    const response = await client.getEntries({ content_type: "contactsPage" });
+    return response.items[0].fields;
+};
