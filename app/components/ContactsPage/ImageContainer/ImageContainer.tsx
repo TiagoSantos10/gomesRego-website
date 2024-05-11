@@ -2,8 +2,8 @@
 
 import { Almarai } from "next/font/google";
 import { ImageType } from "@/app/utils/types/types";
-import styles from "./ImageContainer.module.css";
 import Button from "../../Common/Button/Button";
+import styles from "./ImageContainer.module.css";
 
 type ImageContainerProps = {
     contactsPageHeader: string;
