@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    position: relative;
+    width: 70%;
+}
+
+.imageContainer {
+    background-color: black;
+}
+
+.bgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    aspect-ratio: 2 / 1;
+}
+
+.content {
+    position: absolute;
+    margin-top: 120px;
+    margin-left: var(--large-spacing);
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+}
+
+.stylingBar {
+    height: 75px;
+    width: 5px;
+    background-color: var(--gras-beige);
+}
+
+.header {
+    color: var(--gras-beige);
+    font-size: 40px;
+    margin: 0 0 0 20px;
+}
+
+.description {
+    color: white;
+    font-size: 18px;
+    margin-top: 30px;
+    max-width: 50vw;
+}
+
+.buttonContainer {
+    margin-top: var(--large-spacing);
+}

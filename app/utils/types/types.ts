@@ -131,3 +131,15 @@ export type ApproachItemType = {
         itemIcon: ImageType;
     }
 };
+
+export type OfficeType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        officeCity: string;
+        street: string;
+        floorRoom: string;
+        adressCode: string;
+    }
+};

@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: var(--gras-purple);
+}
+
+.localization {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
