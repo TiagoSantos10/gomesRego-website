@@ -1,17 +1,24 @@
 import { getHomePage } from "@/services/apis/contentful/contentful";
 import CompanyCover from "./components/HomePage/CompanyCover/CompanyCover";
-import AboutSection from "./components/HomePage/AboutSection/AboutSection";
-import ApproachSection from "./components/HomePage/ApproachSection/ApproachSection";
 import PartnersSection from "./components/HomePage/PartnersSection/PartnersSection";
+import AboutApproachSections from "./components/HomePage/AboutAproachSections/AboutApproachSections";
+import { AboutSectionDataType } from "./utils/types/types";
 
 const App = async () => {
     const homePage = await getHomePage();
+    const approachData = {
+        sectionHeader: homePage.approachSectionTitle,
+        approachItems: homePage.approachItems
+    };
+    const aboutData: AboutSectionDataType = {
+        data: homePage.aboutSection,
+        textAlignment: "left"
+    };
     
     return (
         <>
             <CompanyCover />
-            <AboutSection aboutSection={homePage.aboutSection} textAlignment="left" />
-            <ApproachSection sectionHeader={homePage.approachSectionTitle} approachItems={homePage.approachItems} />
+            <AboutApproachSections approachData={approachData} aboutData={aboutData} />
             <PartnersSection partners={homePage.partners} />
         </>
     );};

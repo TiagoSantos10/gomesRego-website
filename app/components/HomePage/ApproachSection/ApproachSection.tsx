@@ -1,5 +1,5 @@
 import { Almarai } from "next/font/google";
-import { ApproachItemType } from "@/app/utils/types/types";
+import { ApproachSectionDataType } from "@/app/utils/types/types";
 import styles from "./ApproachSection.module.css";
 import ApproachItem from "./ApproachItem/ApproachItem";
 
@@ -8,14 +8,13 @@ const almarai = Almarai({
     weight: "400"
 });
 
-type ApproachSectionProps = {
-    sectionHeader: string;
-    approachItems: ApproachItemType[];
+type ApproachSectionProps = ApproachSectionDataType & {
+    myRef: React.RefObject<HTMLDivElement>
 };
 
-const ApproachSection: React.FC<ApproachSectionProps> = ({ sectionHeader, approachItems }) => {
+const ApproachSection: React.FC<ApproachSectionProps> = ({ sectionHeader, approachItems, myRef }) => {
     return (
-        <section className={styles.approachSection} id="approach">
+        <section className={styles.approachSection} id="approach" ref={myRef}>
             <h1 className={`${almarai.className} ${styles.headingTitle}`}>{sectionHeader}</h1>
             <div className={styles.approachGroup}>
                 {approachItems.map((item) => (
