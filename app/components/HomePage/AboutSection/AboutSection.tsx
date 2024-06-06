@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@/public/fontawesome";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 import Link from "next/link";
+import { AboutSectionDataType } from "@/app/utils/types/types";
 import styles from "./AboutSection.module.css";
 
 const almarai = Almarai({
@@ -12,42 +12,17 @@ const almarai = Almarai({
     weight: "400"
 });
 
-type AboutSectionProps = {
-    aboutSection: {
-        sys: {
-            id: string;
-        },
-        fields: {
-            title: string;
-            description: {
-                nodeType: BLOCKS.DOCUMENT;
-                data: {};
-                content: [];
-            };
-            smallTitle: string;
-            workList: string[];
-            image: {
-                sys: {
-                    id: string;
-                },
-                fields: {
-                    file: {
-                        url: string;
-                    };
-                };
-            }
-        };
-    };
-    textAlignment: "left" | "right";
+type AboutSectionProps = AboutSectionDataType & {
+    onApproachItemClick: () => void;
 };
 
-const AboutSection: React.FC<AboutSectionProps> = ({ aboutSection, textAlignment }) => {
+const AboutSection: React.FC<AboutSectionProps> = ({ data, textAlignment, onApproachItemClick }) => {
     const {
         title,
         description,
         smallTitle,
         image
-    } = aboutSection.fields;
+    } = data.fields;
 
     const alignmentClass = textAlignment === "left" ? styles.alignLeft : styles.alignRight;
     const markdownDescription = documentToReactComponents(description);
@@ -68,7 +43,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ aboutSection, textAlignment
                             color="var(--gras-purple)"
                             className={styles.faIcon}
                         />
-                        <Link className={styles.a} href="#approach">A nossa abordagem</Link>
+                        <button className={styles.a} onClick={() => onApproachItemClick()}>A nossa abordagem</button>
                     </li>
                     <li className={styles.listItem}>
                         <FontAwesomeIcon

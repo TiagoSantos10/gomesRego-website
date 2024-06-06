@@ -143,3 +143,37 @@ export type OfficeType = {
         adressCode: string;
     }
 };
+
+export type AboutSectionDataType = {
+    data: {
+        sys: {
+            id: string;
+        },
+        fields: {
+            title: string;
+            description: {
+                nodeType: BLOCKS.DOCUMENT;
+                data: {};
+                content: [];
+            };
+            smallTitle: string;
+            workList: string[];
+            image: {
+                sys: {
+                    id: string;
+                },
+                fields: {
+                    file: {
+                        url: string;
+                    };
+                };
+            }
+        };
+    };
+    textAlignment: "left" | "right";
+}
+
+export type ApproachSectionDataType = {
+    sectionHeader: string;
+    approachItems: ApproachItemType[];
+};
