@@ -23,4 +23,8 @@
     width: 100%;
 }
 
-@media (max-width: 792px) {}
+@media (max-width: 792px) {
+    .approachGroup {
+        grid-template-columns: 1fr;
+    }
+}

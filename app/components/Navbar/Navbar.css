@@ -84,10 +84,10 @@
     }
 
     .navbar-navigation {
-        margin-right: 40px !important;
+        margin-right: var(--small-spacing) !important;
     }
 
     .gras-logo {
-        margin-left: 40px !important;
+        margin-left: var(--small-spacing) !important;
     }
 }

@@ -55,3 +55,14 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
+@media (max-width: 792px) {
+    #aboutSectionContainer {
+        margin: 35px 25px;
+        gap: 25px;
+    }
+
+    .bigTitle {
+        font-size: 2rem;
+    }
+}
