@@ -34,6 +34,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ data, textAlignment, onAppr
                 <div className={styles.aboutDescription}>
                     {markdownDescription}
                 </div>
+                <img
+                    src={image.fields.file.url}
+                    alt="About us Section Image"
+                    className={styles.aboutImageMobile}
+                />
                 <h3 className={`${almarai.className} ${styles.smallTitle}`}>{smallTitle}</h3>
                 <ul className={styles.workList}>
                     <li className={styles.listItem}>
