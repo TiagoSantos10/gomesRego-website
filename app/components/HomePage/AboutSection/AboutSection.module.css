@@ -55,3 +55,37 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
+.aboutImageMobile {
+    display: none;
+}
+
+@media (max-width: 792px) {
+    #aboutSectionContainer {
+        margin: 35px 25px;
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    .aboutContent {
+        width: 100%;
+    }
+
+    .aboutImage {
+        display: none;
+    }
+
+    .aboutImageMobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-top: 25px;
+    }
+
+    .bigTitle {
+        font-size: 2rem;
+    }
+}

@@ -10,3 +10,13 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 792px) {
+    #partnersSection {
+        padding: var(--medium-spacing) var(--small-spacing);
+
+        .partnersContent {
+            flex-direction: column;
+        }
+    }
+}
