@@ -47,29 +47,57 @@ const PartnerSection = ({
     }, []);
 
     return (
-        <div ref={divRef} className={`${styles.partnerSection} ${alignmentClass} ${backgroundClass}`}>
-            <div className={styles.partnerImageContainer}>
-                <img src={image} alt={name} className={styles.image} />
-            </div>
-            <div className={styles.partnerContent}>
-                <h1 className={`${almarai.className} ${styles.headingTitle}`}>{name}</h1>
-                <div className={styles.contentDescription}>
-                    <ul className={styles.unorderedList}>
-                        {description.map((desc, index) => (
-                            <li key={index}>{desc}</li>
-                        ))}
-                    </ul>
+        <div ref={divRef} className={styles.partnerSection}>
+            <div className={`${styles.desktop} ${alignmentClass} ${backgroundClass}`}>
+                <div className={styles.partnerImageContainer}>
+                    <img src={image} alt={name} className={styles.image} />
                 </div>
-                <div className={styles.partnerSocials}>
-                    <a href={`mailto:${email}`} target="_blank" className={styles.anchor}>
-                        <FontAwesomeIcon icon={["fas", "envelope-square"]} size="2xl" color={socialsBackgroundColor} />
-                    </a>
-                    <a href={facebook} target="_blank" className={styles.anchor}>
-                        <FontAwesomeIcon icon={["fab", "facebook-square"]} size="2xl" color={socialsBackgroundColor} />
-                    </a>
-                    <a href={linkedin} target="_blank" className={styles.anchor}>
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} size="2xl" color={socialsBackgroundColor} />
-                    </a>
+                <div className={styles.partnerContent}>
+                    <h1 className={`${almarai.className} ${styles.headingTitle}`}>{name}</h1>
+                    <div className={styles.contentDescription}>
+                        <ul className={styles.unorderedList}>
+                            {description.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.partnerSocials}>
+                        <a href={`mailto:${email}`} target="_blank" className={styles.anchor}>
+                            <FontAwesomeIcon icon={["fas", "envelope-square"]} size="2xl" color={socialsBackgroundColor} />
+                        </a>
+                        <a href={facebook} target="_blank" className={styles.anchor}>
+                            <FontAwesomeIcon icon={["fab", "facebook-square"]} size="2xl" color={socialsBackgroundColor} />
+                        </a>
+                        <a href={linkedin} target="_blank" className={styles.anchor}>
+                            <FontAwesomeIcon icon={["fab", "linkedin"]} size="2xl" color={socialsBackgroundColor} />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div className={`${styles.mobile} ${backgroundClass}`}>
+                <h1 className={`${almarai.className} ${styles.headingTitle}`}>{name}</h1>
+                <div className={`${styles.content} ${alignmentClass}`}>
+                    <div className={styles.imageContainer}>
+                        <img src={image} alt={name} className={styles.image} />
+                        <div className={styles.socials}>
+                            <a href={`mailto:${email}`} target="_blank" className={styles.anchor}>
+                                <FontAwesomeIcon icon={["fas", "envelope-square"]} size="2x" color={socialsBackgroundColor} />
+                            </a>
+                            <a href={facebook} target="_blank" className={styles.anchor}>
+                                <FontAwesomeIcon icon={["fab", "facebook-square"]} size="2x" color={socialsBackgroundColor} />
+                            </a>
+                            <a href={linkedin} target="_blank" className={styles.anchor}>
+                                <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" color={socialsBackgroundColor} />
+                            </a>
+                        </div>
+                    </div>
+                    <div className={styles.contentDescription}>
+                        <ul className={styles.unorderedList}>
+                            {description.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
