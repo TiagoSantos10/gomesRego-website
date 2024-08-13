@@ -7,7 +7,7 @@
 }
 
 .smallTitle {
-    font-size: 20px;
+    font-size: 24px;
     margin: 35px 0 0 0;
     font-weight: 600;
     color: var(--gras-purple)
@@ -17,4 +17,17 @@
     font-size: 16px;
     font-weight: 400;
     margin: 20px 0 0 0;
+}
+
+@media (max-width: 792px) {
+    .container {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .email {
+        margin-bottom: 35px;
+    }
 }

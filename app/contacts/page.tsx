@@ -1,6 +1,7 @@
 import { getContactsPage } from "@/services/apis/contentful/contentful";
 import ImageContainer from "../components/ContactsPage/ImageContainer/ImageContainer";
 import ContactsInfoContainer from "../components/ContactsPage/ContactsInfoContainer/ContactsInfoContainer";
+import styles from "./Contacts.module.css";
 
 const Contacts = async () => {
     const contactsPage = await getContactsPage();
@@ -16,7 +17,7 @@ const Contacts = async () => {
     } = contactsPage;
 
     return (
-        <section style={{display: "flex", flexGrow: 1}}>
+        <section className={styles.section}>
             <ImageContainer
                 contactsPageHeader={contactsPageHeader}
                 description={description}
