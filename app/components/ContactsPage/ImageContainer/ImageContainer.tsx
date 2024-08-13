@@ -2,14 +2,11 @@
 
 import { Almarai } from "next/font/google";
 import { ImageType } from "@/app/utils/types/types";
-import Button from "../../Common/Button/Button";
 import styles from "./ImageContainer.module.css";
 
 type ImageContainerProps = {
     contactsPageHeader: string;
     description: string;
-    button: string;
-    buttonText: string;
     image: ImageType;
 };
 
@@ -21,8 +18,6 @@ const almarai = Almarai({
 const ImageContainer: React.FC<ImageContainerProps> = ({
     contactsPageHeader,
     description,
-    button,
-    buttonText,
     image
 }) => {
     return (
@@ -36,18 +31,6 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
                     <h1 className={`${almarai.className} ${styles.header}`}>{contactsPageHeader}</h1>
                 </div>
                 <p className={styles.description}>{description}</p>
-                {button && (
-                    <div className={styles.buttonContainer}>
-                        <Button
-                            text={buttonText}
-                            size="medium"
-                            onClick={() => {
-                                location.href="mailto:tiagoserafimsousasantos@gmail.com";
-                            }}
-                            variant="light"
-                        />
-                    </div>
-                )}
             </div>
         </div>
     );
