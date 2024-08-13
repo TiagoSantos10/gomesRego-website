@@ -8,8 +8,6 @@ const Contacts = async () => {
     const {
         contactsPageHeader,
         description,
-        button,
-        buttonText,
         officesList,
         smallEmailTitle,
         defaultEmail,
@@ -21,8 +19,6 @@ const Contacts = async () => {
             <ImageContainer
                 contactsPageHeader={contactsPageHeader}
                 description={description}
-                button={button}
-                buttonText={buttonText}
                 image={backgroundImage}
             />
             <ContactsInfoContainer
