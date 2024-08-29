@@ -32,3 +32,14 @@
     font-size: 12px;
     color: var(--gras-gray);
 }
+
+@media (max-width: 792px) {
+    .detailedNewsContainer {
+        padding: 0 var(--small-spacing) var(--medium-spacing) var(--small-spacing);
+    }
+    
+    .detailedNewsImg {
+        height: auto;
+        aspect-ratio: 1;
+    }
+}
