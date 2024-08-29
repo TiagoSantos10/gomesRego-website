@@ -40,13 +40,16 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
     services,
     sectionHeader
 }) => {
+    const windowSize = window.innerWidth;
+    const slidesPerView = windowSize < 630 ? 1 : (windowSize < 792 ? 2 : 5);
+
     return (
         <section className={styles.servicesContainer}>
             <h1 className={`${almarai.className} section-title`}>{sectionHeader}</h1>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
-                slidesPerView={5}
-                slidesPerGroup={5}
+                slidesPerView={slidesPerView}
+                slidesPerGroup={slidesPerView}
                 navigation={true}
                 pagination={{ clickable: true }}
                 style={{ width: "100%", height: "200px"}}

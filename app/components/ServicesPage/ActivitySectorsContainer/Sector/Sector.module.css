@@ -66,3 +66,20 @@
     opacity: 1;
     transform: translateX(0);
 }
+
+@media (max-width: 792px) {
+    .sectorContainer {
+        flex-direction: column-reverse;
+        gap: 0;
+        justify-content: center;
+
+        .sectorContent {
+            width: 100%;
+        }
+    
+        .sectorImage {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
