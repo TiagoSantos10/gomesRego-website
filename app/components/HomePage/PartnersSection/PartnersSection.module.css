@@ -13,7 +13,7 @@
 
 @media (max-width: 792px) {
     #partnersSection {
-        padding: var(--medium-spacing) var(--small-spacing);
+        padding: 30px var(--small-spacing);
 
         .partnersContent {
             flex-direction: column;
