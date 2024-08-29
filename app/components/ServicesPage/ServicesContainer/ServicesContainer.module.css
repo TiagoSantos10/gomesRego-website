@@ -53,3 +53,19 @@
         background-color: var(--gras-background-blue);
     }
 }
+
+@media (max-width: 792px) {
+    .servicesContainer {
+        padding: 30px var(--small-spacing) 30px var(--small-spacing);
+
+        .swiper-slide {
+            .item {
+                margin-bottom: 30px;
+
+                .itemText {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}

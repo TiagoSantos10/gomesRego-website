@@ -3,6 +3,7 @@
 import { Almarai } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
+import { useEffect, useState } from "react";
 import { ServicesType } from "@/app/utils/types/types";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,13 +41,21 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
     services,
     sectionHeader
 }) => {
+    const [slidesPerView, setSlidesPerView] = useState(5);
+
+    useEffect(() => {
+        const windowSize = window.innerWidth;
+        const slidesNumber = windowSize < 630 ? 1 : (windowSize < 792 ? 2 : 5);   
+        setSlidesPerView(slidesNumber); 
+    }, []);
+
     return (
         <section className={styles.servicesContainer}>
             <h1 className={`${almarai.className} section-title`}>{sectionHeader}</h1>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
-                slidesPerView={5}
-                slidesPerGroup={5}
+                slidesPerView={slidesPerView}
+                slidesPerGroup={slidesPerView}
                 navigation={true}
                 pagination={{ clickable: true }}
                 style={{ width: "100%", height: "200px"}}
