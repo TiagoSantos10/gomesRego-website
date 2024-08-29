@@ -1,5 +1,6 @@
 "use client";
 
+import * as ScrollArea from "@radix-ui/react-scroll-area";
 import Button from "@/app/components/Common/Button/Button";
 import useNews from "@/app/utils/hooks";
 import { NewsCategoriesType } from "@/app/utils/types/types";
@@ -15,16 +16,37 @@ const OptionsSection = () => {
     };
 
     return (
-        <div className={styles.optionsSection}>
-            {filters.map((option: NewsCategoriesType, index: number) => (
-                <Button
-                    key={index}
-                    text={option.fields.name}
-                    onClick={() => handleButtonClick(option.fields.name)}
-                    isSelected={option.fields.name === news.activeFilter}    
-                />
-            ))}
-        </div>
+        <>
+            <ScrollArea.Root className={styles.scrollAreaRoot}>
+                <ScrollArea.Viewport>
+                    <div className={styles.optionsSection}>
+                        {filters.map((option: NewsCategoriesType, index: number) => (
+                            <Button
+                                key={index}
+                                text={option.fields.name}
+                                onClick={() => handleButtonClick(option.fields.name)}
+                                isSelected={option.fields.name === news.activeFilter}    
+                            />
+                        ))}
+                    </div>
+                </ScrollArea.Viewport>
+                <ScrollArea.Scrollbar orientation="horizontal">
+                    <ScrollArea.Thumb />
+                </ScrollArea.Scrollbar>
+            </ScrollArea.Root>
+            <div className={styles.desktop}>
+                <div className={styles.optionsSection}>
+                    {filters.map((option: NewsCategoriesType, index: number) => (
+                        <Button
+                            key={index}
+                            text={option.fields.name}
+                            onClick={() => handleButtonClick(option.fields.name)}
+                            isSelected={option.fields.name === news.activeFilter}    
+                        />
+                    ))}
+                </div>
+            </div>
+        </>
     );
 };
 

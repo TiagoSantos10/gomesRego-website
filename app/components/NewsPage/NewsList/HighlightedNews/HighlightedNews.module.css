@@ -50,3 +50,25 @@
     transform: scale(1.03);
     transition: transform 0.3s ease-in-out;
 }
+
+/* Mobile Device */
+
+@media (max-width: 792px) {
+    .highlightedNewsImage {
+        aspect-ratio: 1;
+        border-radius: 20px;
+    }
+
+    .highlightedNewsTitle {
+        font-size: 20px;
+        margin: 10px 10px 20px 10px;
+    }
+
+    .highlightedNewsContent {
+        margin: 10px 5px;
+    }
+
+    .highlightedNewsDescription {
+        margin: 0 10px 10px 10px;
+    }
+}

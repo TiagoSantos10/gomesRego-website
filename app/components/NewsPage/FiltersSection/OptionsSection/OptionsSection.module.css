@@ -1,6 +1,28 @@
+.scrollAreaRoot {
+    display: none;
+}
+
+.desktop {
+    max-width: 60%;
+}
+
 .optionsSection {
     display: flex;
     gap: 10px;
-    max-width: 60%;
     flex-wrap: wrap;
+}
+
+@media (max-width: 792px) {
+    .optionsSection {
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .scrollAreaRoot {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
 }
