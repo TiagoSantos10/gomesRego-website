@@ -6,3 +6,11 @@
     padding-left: var(--large-spacing);
     padding-right: var(--large-spacing);
 }
+
+@media (max-width: 792px) {
+    .section {
+        margin-top: 30px;
+        padding-left: var(--small-spacing);
+        padding-right: var(--small-spacing);
+    }
+}

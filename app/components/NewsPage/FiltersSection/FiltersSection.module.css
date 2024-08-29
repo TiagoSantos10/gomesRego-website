@@ -4,3 +4,12 @@
     margin-bottom: 50px;
     width: 100%;
 }
+
+/* Mobile device */
+
+@media (max-width: 792px) {
+    .filtersSection {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}

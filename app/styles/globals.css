@@ -20,6 +20,12 @@ main {
     margin: 0 0 var(--medium-spacing) 0;
 }
 
+@media (max-width: 792px) {
+    .section-title {
+        font-size: 25px;
+    }
+}
+
 :root {
     --gras-purple: #2C255B;
     --gras-gray: #838385;
