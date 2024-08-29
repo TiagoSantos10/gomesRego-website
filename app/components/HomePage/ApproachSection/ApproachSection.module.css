@@ -4,14 +4,14 @@
     align-items: center;
     flex-direction: column;
     padding: 0 var(--large-spacing);
+}
 
-    .headingTitle {
-        color: var(--gras-white-title);
-        font-size: 35px;
-        font-weight: 400;
-        text-align: center;
-        margin: var(--medium-spacing) 0 var(--medium-spacing) 0;
-    }
+.headingTitle {
+    color: var(--gras-white-title);
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    margin: var(--medium-spacing) 0 var(--medium-spacing) 0;
 }
 
 .approachGroup {
@@ -26,5 +26,9 @@
 @media (max-width: 792px) {
     .approachGroup {
         grid-template-columns: 1fr;
+    }
+
+    .headingTitle {
+        font-size: 2rem;
     }
 }

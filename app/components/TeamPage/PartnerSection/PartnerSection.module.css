@@ -106,7 +106,7 @@
     .mobile {
         display: flex;
         flex-direction: column;
-        padding: 50px var(--small-spacing);
+        padding: 30px var(--small-spacing);
     }
 
     .headingTitle {

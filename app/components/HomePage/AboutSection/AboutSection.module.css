@@ -62,7 +62,7 @@
 
 @media (max-width: 792px) {
     #aboutSectionContainer {
-        margin: 35px 25px;
+        margin: 30px 25px;
         gap: 25px;
         flex-direction: column;
     }
