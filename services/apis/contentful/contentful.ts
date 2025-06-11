@@ -79,7 +79,7 @@ export const getDetailedNews = async (slug: string) => {
  */
 export const getHomePage = async () => {
     const client = createClient();
-    const response = await client.getEntries({ content_type: "homePage" });
+    const response = await client.getEntries({ content_type: "homePage", include: 10 });
     return response.items[0].fields;
 };
 

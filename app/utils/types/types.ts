@@ -157,7 +157,25 @@ export type AboutSectionDataType = {
                 content: [];
             };
             smallTitle: string;
-            workList: string[];
+            highlightsList: {
+                sys: {
+                    id: string;
+                },
+                fields: {
+                    title: string;
+                    description: string;
+                    icon: {
+                        sys: {
+                            id: string;
+                        },
+                        fields: {
+                            file: {
+                                url: string;
+                            }
+                        }
+                    }
+                }
+            }[];
             image: {
                 sys: {
                     id: string;
