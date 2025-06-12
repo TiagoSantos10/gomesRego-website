@@ -1,0 +1,4 @@
+#sectionDescriptionContainer {
+    padding: var(--medium-spacing) 200px;
+    text-align: center;
+}

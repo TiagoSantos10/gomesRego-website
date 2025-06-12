@@ -121,17 +121,6 @@ export type HomePageType = {
     }
 };
 
-export type ApproachItemType = {
-    sys: {
-        id: string;
-    },
-    fields: {
-        title: string;
-        description: string;
-        itemIcon: ImageType;
-    }
-};
-
 export type OfficeType = {
     sys: {
         id: string;
@@ -193,7 +182,25 @@ export type AboutSectionDataType = {
     textAlignment: "left" | "right";
 }
 
-export type ApproachSectionDataType = {
-    sectionHeader: string;
-    approachItems: ApproachItemType[];
+export type CardsType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        cardTitle: string;
+        cardDescription: string;
+        cardIcon: ImageType; 
+    };
+}
+
+export type CompanyGuidelinesDataType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        title: string;
+        headerDescription: string;
+        footerDescription: string;
+        cardsSection: CardsType[];
+    }
 };

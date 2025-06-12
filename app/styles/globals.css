@@ -12,20 +12,6 @@ main {
     flex-direction: column;
 }
 
-.section-title {
-    color: var(--gras-background-blue);
-    font-size: 35px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0 0 var(--medium-spacing) 0;
-}
-
-@media (max-width: 792px) {
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
 :root {
     /* Colors */
     --gras-titles-blue: #38678D;
@@ -35,6 +21,7 @@ main {
     --gras-beige: #FFF8E7;
     --gras-white-title: #EAEAEA;
     --gras-background-details-blue: #E6F0FF;
+    --gras-subtitle-navy-blue: #364153;
 
     /* Spacing */
     --large-spacing: 85px;

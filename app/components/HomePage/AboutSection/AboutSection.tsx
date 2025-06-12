@@ -1,15 +1,10 @@
-import { Almarai } from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@/public/fontawesome";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { AboutSectionDataType } from "@/app/utils/types/types";
 import styles from "./AboutSection.module.css";
 import AboutUsHighlights from "./AboutUsHighlights/AboutUsHighlights";
-
-const almarai = Almarai({
-    subsets: ["arabic"],
-    weight: "400"
-});
+import SectionHeader from "../../Common/SectionHeader/SectionHeader";
 
 type AboutSectionProps = AboutSectionDataType;
 
@@ -27,7 +22,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ data, textAlignment }) => {
     return (
         <section id={styles.aboutSectionContainer} className={alignmentClass}>
             <div className={styles.aboutContent}>
-                <h1 className={`${almarai.className} ${styles.bigTitle}`}>{title}</h1>
+                <SectionHeader title={title} />
                 <img
                     src={image.fields.file.url}
                     alt="About us Section Image"

@@ -14,12 +14,6 @@
     flex-direction: row-reverse;
 }
 
-.bigTitle {
-    color: var(--gras-titles-blue);
-    font-size: var(--section-title);
-    font-weight: 400;
-}
-
 .aboutImage {
     width: 100%;
     height: auto;
