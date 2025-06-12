@@ -144,6 +144,26 @@ export type OfficeType = {
     }
 };
 
+type HighlightsListType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        title: string;
+        description: string;
+        icon: {
+            sys: {
+                id: string;
+            },
+            fields: {
+                file: {
+                    url: string;
+                }
+            }
+        }
+    }
+}
+
 export type AboutSectionDataType = {
     data: {
         sys: {
@@ -157,7 +177,7 @@ export type AboutSectionDataType = {
                 content: [];
             };
             smallTitle: string;
-            workList: string[];
+            highlightsList: HighlightsListType[];
             image: {
                 sys: {
                     id: string;

@@ -27,13 +27,28 @@ main {
 }
 
 :root {
+    /* Colors */
+    --gras-titles-blue: #38678D;
     --gras-purple: #2C255B;
     --gras-gray: #838385;
-    --gras-background-blue: #38678D;
+    --gras-background-blue: #F5F9FF;
     --gras-beige: #FFF8E7;
     --gras-white-title: #EAEAEA;
+    --gras-background-details-blue: #E6F0FF;
 
+    /* Spacing */
     --large-spacing: 85px;
     --medium-spacing: 50px;
     --small-spacing: 25px;
+
+    /* Font Sizes */
+    --section-title: 30px;
+    --section-subtitle: 20px;
+    --section-text: 16px;
+
+    /* Breakpoints */
+    --breakpoint-mobile: 792px;
+
+    /* Radius */
+    --border-radius: 8px;
 }
