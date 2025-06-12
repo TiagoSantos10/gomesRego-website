@@ -1,14 +1,9 @@
-import { Almarai } from "next/font/google";
 import { getCategories, getNews, getNewsPage } from "@/services/apis/contentful/contentful";
 import FiltersSection from "../components/NewsPage/FiltersSection/FiltersSection";
 import NewsList from "../components/NewsPage/NewsList/NewsList";
 import NewsProvider from "../components/NewsPage/NewsProvider/NewsProvider";
 import styles from "./NewsPage.module.css";
-
-const almarai = Almarai({
-    subsets: ["arabic"],
-    weight: "400"
-});
+import SectionHeader from "../components/Common/SectionHeader/SectionHeader";
 
 const News = async () => {
     const { newsHeader } = await getNewsPage();
@@ -18,7 +13,7 @@ const News = async () => {
     return (
         <NewsProvider initialNews={news} filters={categories}>
             <section className={styles.section}>
-                <h1 className={`${almarai.className} section-title`}>{newsHeader}</h1>
+                <SectionHeader title={newsHeader} />
                 <FiltersSection />
                 <NewsList />
             </section>

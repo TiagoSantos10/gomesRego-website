@@ -4,6 +4,7 @@ import "@/public/fontawesome";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { NewsType } from "@/app/utils/types/types";
 import styles from "./DetailedNews.module.css";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 
 type DetailedNewsProps = {
     news: NewsType;
@@ -15,7 +16,7 @@ const DetailedNews: React.FC<DetailedNewsProps> = ({ news }) => {
 
     return (
         <section className={styles.detailedNewsContainer}>
-            <h1 className="section-title">{title}</h1>
+            <SectionHeader title={title} />
             <div className={styles.detailedNewsContent}>
                 <img src={image.fields.file.url} alt={slug} className={styles.detailedNewsImg} />
                 <div className={styles.detailedNewsDateContent}>
