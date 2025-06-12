@@ -23,7 +23,7 @@ const AboutUsHighlights: React.FC<AboutUsHighlightsProps> = ({
                 <img
                     src={iconUrl}
                     className={styles.icon}
-                    alt="Highlight Icon"
+                    alt={title || "Highlight Icon"}
                 />
             </div>
             <div className={styles.highlightContent}>

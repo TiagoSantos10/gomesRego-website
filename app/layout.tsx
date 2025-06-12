@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import "./styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"], weight: "400" });
+const inter = Inter({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
     title: "Gomes, Rego & Associates",
