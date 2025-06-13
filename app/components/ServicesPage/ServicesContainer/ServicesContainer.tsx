@@ -39,8 +39,8 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
 
     useEffect(() => {
         const windowSize = window.innerWidth;
-        const slidesNumber = windowSize < 630 ? 1 : (windowSize < 792 ? 2 : 5);   
-        setSlidesPerView(slidesNumber); 
+        const slidesNumber = windowSize < 630 ? 1 : (windowSize < 792 ? 2 : 5);
+        setSlidesPerView(slidesNumber);
     }, []);
 
     const {
@@ -55,11 +55,12 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
             <SectionDescription description={description} />
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
+                spaceBetween={20}
                 slidesPerView={slidesPerView}
                 slidesPerGroup={slidesPerView}
                 navigation={true}
                 pagination={{ clickable: true }}
-                style={{ width: "100%", height: "200px"}}
+                style={{ width: "100%", height: "200px" }}
             >
                 {
                     servicesList.map((service, index) => (
