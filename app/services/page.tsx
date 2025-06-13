@@ -1,30 +1,15 @@
 import { getServicesPage } from "@/services/apis/contentful/contentful";
-import ActivitySectorsContainer from "../components/ServicesPage/ActivitySectorsContainer/ActivitySectorsContainer";
 import ServicesContainer from "../components/ServicesPage/ServicesContainer/ServicesContainer";
+import { ServicesPageType, ServicesSectionType } from "../utils/types/types";
 
 const Services = async () => {
-    const {
-        activitySectorsHeader,
-        publicSectorActivities,
-        publicSectorImage,
-        privateSectorActivities,
-        privateSectorImage,
-        servicesHeader,
-        services
-    } = await getServicesPage();
+    const servicesPageData: ServicesPageType = await getServicesPage();
+    const servicesSectionData: ServicesSectionType = servicesPageData.servicesSection;
     
     return (
         <>
-            <ActivitySectorsContainer
-                publicSectorItems={publicSectorActivities}
-                publicSectorImage={publicSectorImage}
-                sectionHeader={activitySectorsHeader}
-                privateSectorItems={privateSectorActivities}
-                privateSectorImage={privateSectorImage}
-            />
             <ServicesContainer
-                services={services}
-                sectionHeader={servicesHeader}
+                servicesSectionData={servicesSectionData}
             />
         </>
     );};

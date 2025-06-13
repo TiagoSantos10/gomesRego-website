@@ -57,7 +57,7 @@ const Navbar = () => {
                                     href="/services"
                                     className={pathname === "/services" ? "active" : ""}
                                 >
-                        Áreas de Atuação
+                        Serviços & Valores
                                 </a>
                                 <a
                                     href="/news"

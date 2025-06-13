@@ -48,6 +48,16 @@ export type PartnersType = {
     }
 };
 
+export type ServicesType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        name: string;
+        serviceImage: ImageType;
+    }
+};
+
 /**
  * Home Page types
  */
@@ -190,14 +200,20 @@ export type NewsContextType = {
  * Services Page Types
  */
 
-export type ServicesType = {
+export type ServicesSectionType = {
     sys: {
         id: string;
     },
     fields: {
-        name: string;
-        serviceImage: ImageType;
+        title: string;
+        description: string;
+        servicesList: ServicesType[];
     }
+};
+
+export type ServicesPageType = {
+    entryTitle: string;
+    servicesSection: ServicesSectionType;
 };
 
 /**

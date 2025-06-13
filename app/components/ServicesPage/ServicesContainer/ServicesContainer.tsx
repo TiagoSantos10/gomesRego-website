@@ -1,20 +1,16 @@
 "use client";
 
-import { Almarai } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { useEffect, useState } from "react";
-import { ServicesType } from "@/app/utils/types/types";
+import { ServicesSectionType } from "@/app/utils/types/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/manipulation";
 import styles from "./ServicesContainer.module.css";
-
-const almarai = Almarai({
-    subsets: ["arabic"],
-    weight: "400"
-});
+import SectionHeader from "../../Common/SectionHeader/SectionHeader";
+import SectionDescription from "../../Common/SectionDescription/SectionDescription";
 
 type SwiperSlideElementType = {
     text: string;
@@ -33,13 +29,11 @@ const SwiperSlideElement = ({ text, icon }: SwiperSlideElementType) => {
 };
 
 type ServicesContainerProps = {
-    services: ServicesType[];
-    sectionHeader: string;
+    servicesSectionData: ServicesSectionType;
 };
 
 const ServicesContainer: React.FC<ServicesContainerProps> = ({
-    services,
-    sectionHeader
+    servicesSectionData
 }) => {
     const [slidesPerView, setSlidesPerView] = useState(5);
 
@@ -49,9 +43,16 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
         setSlidesPerView(slidesNumber); 
     }, []);
 
+    const {
+        title,
+        description,
+        servicesList
+    } = servicesSectionData.fields;
+
     return (
         <section className={styles.servicesContainer}>
-            <h1 className={`${almarai.className} section-title`}>{sectionHeader}</h1>
+            <SectionHeader title={title} />
+            <SectionDescription description={description} />
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
                 slidesPerView={slidesPerView}
@@ -61,7 +62,7 @@ const ServicesContainer: React.FC<ServicesContainerProps> = ({
                 style={{ width: "100%", height: "200px"}}
             >
                 {
-                    services.map((service, index) => (
+                    servicesList.map((service, index) => (
                         <SwiperSlide key={index} className={styles["swiper-slide"]}>
                             <SwiperSlideElement
                                 text={service.fields.name}

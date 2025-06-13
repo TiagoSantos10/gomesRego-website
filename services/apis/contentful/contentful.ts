@@ -58,7 +58,7 @@ export const getTeamPage = async () => {
  */
 export const getServicesPage = async () => {
     const client = createClient();
-    const response = await client.getEntries({ content_type: "servicesPage" });
+    const response = await client.getEntries({ content_type: "servicesPage", include: 10 });
     return response.items[0].fields;
 };
 
