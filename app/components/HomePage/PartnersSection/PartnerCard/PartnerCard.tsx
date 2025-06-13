@@ -1,32 +1,28 @@
-import Link from "next/link";
 import { Almarai } from "next/font/google";
 import { PartnersType } from "@/app/utils/types/types";
 import styles from "./PartnerCard.module.css";
 
 const almarai = Almarai({
     subsets: ["arabic"],
-    weight: "400"
+    weight: ["400", "700"]
 });
 
 const PartnerCard = ({ partner }: { partner: PartnersType }) => {
-    const { name, image } = partner.fields;
+    const { name, image, role, introduction } = partner.fields;
 
     return (
-        <>
-            <div className={styles.desktopCard}>
-                <Link href="/team">
-                    <img src={image.fields.file.url} alt={name} className={styles.partnerImage} />
-                    <div className={styles.partnerName}>{name}</div>
-                </Link>
+        <div className={styles.partnerCard}>
+            <img
+                src={image.fields.file.url}
+                alt={image.sys.id}
+                className={styles.partnerImage}
+            />
+            <div className={styles.partnerInfo}>
+                <span className={`${almarai.className} ${styles.partnerName}`}>{name}</span>
+                <span className={styles.partnerRole}>{role}</span>
+                <span className={styles.partnerDescription}>{introduction}</span>
             </div>
-            <Link href="/team" className={styles.mobileCard}>
-                <img src={image.fields.file.url} alt={name} className={styles.partnerImageMobile} />
-                <div className={styles.partnerNameMobileSection}>
-                    <h3 className={`${styles.nameMobile} ${almarai.className}`}>{name}</h3>
-                    <p className={styles.roleMobile}>Senior Partner</p>
-                </div>
-            </Link>
-        </>
+        </div>
     );
 };
 
