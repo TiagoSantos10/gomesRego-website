@@ -12,6 +12,7 @@ const App = async () => {
         textAlignment: "left"
     };
     const companyGuidelinesData: CompanyGuidelinesDataType = homePage.guidelines;
+    const partnersData = homePage.partnersSection;
 
     return (
         <>
@@ -21,7 +22,7 @@ const App = async () => {
                 textAlignment="left"
             />
             <CompanyGuidelines data={companyGuidelinesData} />
-            <PartnersSection partners={homePage.partners} />
+            <PartnersSection partnersData={partnersData} />
         </>
     );
 };

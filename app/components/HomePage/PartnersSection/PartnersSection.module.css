@@ -17,6 +17,7 @@
 
         .partnersContent {
             flex-direction: column;
+            gap: var(--medium-spacing);
         }
     }
 }
