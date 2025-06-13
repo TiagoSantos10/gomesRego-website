@@ -14,7 +14,7 @@ const PartnerCard = ({ partner }: { partner: PartnersType }) => {
         <div className={styles.partnerCard}>
             <img
                 src={image.fields.file.url}
-                alt={image.sys.id}
+                alt={name}
                 className={styles.partnerImage}
             />
             <div className={styles.partnerInfo}>
