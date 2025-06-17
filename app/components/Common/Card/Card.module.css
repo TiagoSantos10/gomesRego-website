@@ -6,6 +6,8 @@
     border-radius: var(--border-radius);
     background-color: white;
     max-width: 200px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+    min-height: 200px;
 }
 
 .cardCircle {
@@ -29,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 32px;
+    padding: 0 16px;
 }
 
 .cardTitle {
