@@ -211,9 +211,24 @@ export type ServicesSectionType = {
     }
 };
 
+export type MissionSectionType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        title: string;
+        sectionDescription: string;
+        cardTitle: string;
+        cardDescription: string;
+        cardIcon: ImageType;
+        valuesList: CardsType[];
+    }
+}
+
 export type ServicesPageType = {
     entryTitle: string;
     servicesSection: ServicesSectionType;
+    missionSection: MissionSectionType;
 };
 
 /**

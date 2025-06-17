@@ -1,0 +1,14 @@
+#missionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--medium-spacing) var(--large-spacing);
+    background-color: var(--gras-background-blue);
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

@@ -1,0 +1,31 @@
+.card {
+    background-color: white;
+    padding: 32px;
+    display: flex;
+    gap: var(--large-spacing);
+    align-items: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+}
+
+.cardCircle {
+    min-width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background-color: var(--gras-background-details-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardIcon {
+    width: 24px;
+    height: 24px;
+    color: var(--gras-icon-blue);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
