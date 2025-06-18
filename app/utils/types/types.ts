@@ -225,10 +225,23 @@ export type MissionSectionType = {
     }
 }
 
+export type PurposeSectionType = {
+    sys: {
+        id: string;
+    },
+    fields: {
+        title: string;
+        description: string;
+        image: ImageType;
+        secondDescription: string;
+    }
+}
+
 export type ServicesPageType = {
     entryTitle: string;
     servicesSection: ServicesSectionType;
     missionSection: MissionSectionType;
+    purposeSection: PurposeSectionType;
 };
 
 /**
