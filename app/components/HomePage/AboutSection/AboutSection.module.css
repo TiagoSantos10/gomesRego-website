@@ -2,6 +2,7 @@
     margin: var(--medium-spacing) var(--large-spacing);
     display: flex;
     gap: 150px;
+    justify-content: space-between;
 }
 
 .aboutContent {
@@ -20,6 +21,7 @@
     border-radius: var(--border-radius);
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    max-height: 792px;
 }
 
 .highlights {
