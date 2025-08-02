@@ -24,9 +24,9 @@ const CardInfo = ({
 }: CardInfoProps) => {
     let markdownLocation;
     let markdownTimetable;
-    if (typeof (text) !== "string")
+    if (typeof text !== "string")
         markdownLocation = documentToReactComponents(text);
-    if (typeof (timetable) !== "string")
+    if (typeof timetable !== "string")
         markdownTimetable = documentToReactComponents(timetable);
 
     return (
