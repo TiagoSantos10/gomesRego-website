@@ -254,8 +254,17 @@ export type OfficeType = {
     },
     fields: {
         officeCity: string;
-        street: string;
-        floorRoom: string;
-        adressCode: string;
+        location: {
+            nodeType: BLOCKS.DOCUMENT;
+            data: {};
+            content: [];
+        };
+        phoneNumber: string;
+        timetable: {
+            nodeType: BLOCKS.DOCUMENT;
+            data: {};
+            content: [];
+        };
+        image: ImageType;
     }
 };

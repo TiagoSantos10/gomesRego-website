@@ -89,6 +89,6 @@ export const getHomePage = async () => {
  */
 export const getContactsPage = async () => {
     const client = createClient();
-    const response = await client.getEntries({ content_type: "contactsPage" });
+    const response = await client.getEntries({ content_type: "contactsPage", include: 10 });
     return response.items[0].fields;
 };
