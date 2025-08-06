@@ -6,6 +6,7 @@ import { Almarai } from "next/font/google";
 import * as Dialog from "@radix-ui/react-dialog";
 import "./Hamburger.css";
 import "./Navbar.css";
+import Link from "next/link";
 
 const almarai = Almarai({
     subsets: ["arabic"],
@@ -20,7 +21,7 @@ const Navbar = () => {
         <header>
             <Dialog.Root onOpenChange={() => setIsToggled(!isToggled)}>
                 <div id="navbar" className={almarai.className}>
-                    <div className="gras-logo" />
+                    <Link className="gras-logo" href="/" aria-label="Go to homepage" />
                     <div className="navbar-navigation">
                         <li>
                             <div className="hamburger-menu">
