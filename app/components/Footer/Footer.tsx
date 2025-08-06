@@ -31,7 +31,7 @@ const Footer = () => (
             
         </div>
         <div className={styles.footerText}>
-            © 2024 Gomes Rego e Associados. All rights reserved.
+            © 2025 Gomes Rego e Associados. All rights reserved.
         </div>
     </footer>
 );
