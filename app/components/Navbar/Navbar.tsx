@@ -21,7 +21,7 @@ const Navbar = () => {
         <header>
             <Dialog.Root onOpenChange={() => setIsToggled(!isToggled)}>
                 <div id="navbar" className={almarai.className}>
-                    <Link className="gras-logo" href="/"> </Link>
+                    <Link className="gras-logo" href="/" />
                     <div className="navbar-navigation">
                         <li>
                             <div className="hamburger-menu">
