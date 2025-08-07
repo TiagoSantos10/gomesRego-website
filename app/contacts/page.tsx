@@ -4,6 +4,7 @@ import SectionHeader from "../components/Common/SectionHeader/SectionHeader";
 import SectionDescription from "../components/Common/SectionDescription/SectionDescription";
 import ContactsCard from "../components/ContactsPage/ContactsCard/ContactsCard";
 import { OfficeType } from "../utils/types/types";
+import StickyButton from "../components/StickyButton/StickyButton";
 
 const Contacts = async () => {
     const contactsPage = await getContactsPage();
@@ -22,6 +23,7 @@ const Contacts = async () => {
                     <ContactsCard key={office.sys.id} office={office} />
                 ))}
             </div>
+            <StickyButton />
         </section>
     );
 };
