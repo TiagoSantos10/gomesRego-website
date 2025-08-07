@@ -1,41 +1,41 @@
 body {
-    margin: 0 !important;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  margin: 0 !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    padding-top: 65px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  padding-top: 65px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
-    /* Colors */
-    --gras-titles-blue: #38678D;
-    --gras-purple: #2C255B;
-    --gras-gray: #838385;
-    --gras-background-blue: #F5F9FF;
-    --gras-beige: #FFF8E7;
-    --gras-white-title: #EAEAEA;
-    --gras-background-details-blue: #E6F0FF;
-    --gras-subtitle-navy-blue: #364153;
+  /* Colors */
+  --gras-titles-blue: #38678d;
+  --gras-purple: #2c255b;
+  --gras-gray: #838385;
+  --gras-background-blue: #f5f9ff;
+  --gras-beige: #fff8e7;
+  --gras-white-title: #eaeaea;
+  --gras-background-details-blue: #e6f0ff;
+  --gras-subtitle-navy-blue: #364153;
 
-    /* Spacing */
-    --large-spacing: 85px;
-    --medium-spacing: 50px;
-    --small-spacing: 25px;
+  /* Spacing */
+  --large-spacing: 85px;
+  --medium-spacing: 50px;
+  --small-spacing: 25px;
 
-    /* Font Sizes */
-    --section-title: 30px;
-    --section-subtitle: 20px;
-    --section-text: 16px;
+  /* Font Sizes */
+  --section-title: 30px;
+  --section-subtitle: 20px;
+  --section-text: 16px;
 
-    /* Breakpoints */
-    --breakpoint-mobile: 792px;
+  /* Breakpoints */
+  --breakpoint-mobile: 792px;
 
-    /* Radius */
-    --border-radius: 8px;
+  /* Radius */
+  --border-radius: 8px;
 }
