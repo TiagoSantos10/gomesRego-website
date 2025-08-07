@@ -15,7 +15,7 @@ const StickyButton = () => {
         <FontAwesomeIcon
           icon={faEnvelope}
           size="lg"
-          color="var(--gras-titles-blue)"
+          color="white"
         />
       </div>
     </button>
