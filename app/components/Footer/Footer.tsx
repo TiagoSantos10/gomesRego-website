@@ -14,7 +14,7 @@ const Footer = () => (
                 <FontAwesomeIcon
                     icon={["fab", "linkedin-in"]} 
                     size="lg"
-                    color="var(--gras-background-blue)"
+                    color="var(--gras-titles-blue)"
                 />
             </a>
             <a
@@ -25,7 +25,7 @@ const Footer = () => (
                 <FontAwesomeIcon 
                     icon={["fas", "envelope"]} 
                     size="lg"
-                    color="var(--gras-background-blue)"
+                    color="var(--gras-titles-blue)"
                 />
             </a>
             
