@@ -1,4 +1,4 @@
-#aboutSectionContainer {
+.aboutSectionContainer {
     margin: var(--medium-spacing) var(--large-spacing);
     display: flex;
     gap: 150px;
