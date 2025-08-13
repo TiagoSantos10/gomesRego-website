@@ -24,10 +24,10 @@ const CompanyCover = ({ heroImages }: CompanyCoverProps) => (
             autoplay={{ delay: 4000, disableOnInteraction: false }}
         >
             {
-                heroImages?.map((image, index) => (
-                    <SwiperSlide key={index} className={styles["swiper-slide"]}>
+                heroImages?.map((image) => (
+                    <SwiperSlide key={image.sys.id}>
                         <div className={styles.imageContainer}>
-                            <img src={image.fields.file.url} alt={image.fields.title} className={styles.coverImage} />
+                            <img src={image?.fields?.file?.url || ""} alt={image?.fields?.title || "Hero Image"} className={styles.coverImage} />
                             <div className={styles.contentOverlay}>
                                 <h1 className={styles.overlayTitle}>
                                     {"Gomes Rego & Associados SROC"}
