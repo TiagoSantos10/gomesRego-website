@@ -1,0 +1,48 @@
+.sticky-button {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 0;
+}
+
+.white-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--gras-titles-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.sticky-button:hover .white-circle {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-button:active .white-circle {
+    transform: translateY(0);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animação de entrada */
+.sticky-button {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
