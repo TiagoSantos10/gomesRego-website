@@ -14,7 +14,7 @@ const Footer = () => (
                 <FontAwesomeIcon
                     icon={["fab", "linkedin-in"]} 
                     size="lg"
-                    color="var(--gras-background-blue)"
+                    color="var(--gras-titles-blue)"
                 />
             </a>
             <a
@@ -25,13 +25,13 @@ const Footer = () => (
                 <FontAwesomeIcon 
                     icon={["fas", "envelope"]} 
                     size="lg"
-                    color="var(--gras-background-blue)"
+                    color="var(--gras-titles-blue)"
                 />
             </a>
             
         </div>
         <div className={styles.footerText}>
-            © 2024 Gomes Rego e Associados. All rights reserved.
+            © 2025 Gomes Rego e Associados. All rights reserved.
         </div>
     </footer>
 );
