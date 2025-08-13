@@ -20,7 +20,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ data, textAlignment }) => {
     const markdownDescription = documentToReactComponents(description);
 
     return (
-        <section id={styles.aboutSectionContainer} className={alignmentClass}>
+        <section id="about-section" className={`${styles.aboutSectionContainer} ${alignmentClass}`}>
             <div className={styles.aboutContent}>
                 <SectionHeader title={title} />
                 <img

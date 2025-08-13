@@ -1,18 +1,23 @@
 .grasBtn {
-    border: 2px solid var(--gras-background-blue);
-    border-radius: 5px;
-    color: var(--gras-background-blue);
+    border: 2px solid var(--gras-titles-blue);
+    border-radius: 8px;
+    color: var(--gras-titles-blue);
     cursor: pointer;
     height: 30px;
     padding: 0 10px;
     font-size: 14px;
     display: block;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
-.grasBtn:hover, .selected {
-    background-color: var(--gras-background-blue);
+.grasBtn:hover,
+.selected {
+    background-color: var(--gras-titles-blue);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 90, 61, 0.3);
 }
 
 .medium {
@@ -32,7 +37,7 @@
 }
 
 .light:hover {
-    background-color: var(--gras-background-blue);
+    background-color: var(--gras-titles-blue);
     color: white;
-    border: 2px solid var(--gras-background-blue);
+    border: 2px solid var(--gras-titles-blue);
 }

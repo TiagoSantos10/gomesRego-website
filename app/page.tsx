@@ -13,10 +13,11 @@ const App = async () => {
     };
     const companyGuidelinesData: CompanyGuidelinesDataType = homePage.guidelines;
     const partnersData = homePage.partnersSection;
+    const heroCover = homePage.hero;
 
     return (
         <>
-            <CompanyCover />
+            <CompanyCover heroImages={heroCover} />
             <AboutSection
                 data={aboutData.data}
                 textAlignment="left"
